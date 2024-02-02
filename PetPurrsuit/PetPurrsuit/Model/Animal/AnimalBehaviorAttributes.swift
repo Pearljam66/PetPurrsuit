@@ -16,4 +16,5 @@ struct AnimalBehaviorAttributes: Codable {
     var houseTrained: Bool?
     var declawed: Bool?
     var specialNeeds: Bool?
+    var shotsCurrent: Bool?
 }
