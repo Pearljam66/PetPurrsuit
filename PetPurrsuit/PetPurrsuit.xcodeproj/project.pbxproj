@@ -18,6 +18,20 @@
 		265741C92B6CAB8B0036D467 /* AnimalEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265741C82B6CAB8B0036D467 /* AnimalEnvironment.swift */; };
 		265741CC2B6CAD290036D467 /* AnimalParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265741CB2B6CAD290036D467 /* AnimalParser.swift */; };
 		265741CE2B6CB2F70036D467 /* AnimalMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 265741CD2B6CB2F70036D467 /* AnimalMockData.json */; };
+		265741D02B6CB86C0036D467 /* SearchAnimalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265741CF2B6CB86C0036D467 /* SearchAnimalsView.swift */; };
+		265741D22B6CB9200036D467 /* AnimalsNearByView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265741D12B6CB9200036D467 /* AnimalsNearByView.swift */; };
+		265741D72B6D5C720036D467 /* NetworkRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265741D62B6D5C720036D467 /* NetworkRequestProtocol.swift */; };
+		265741D92B6D5E4A0036D467 /* NetworkRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265741D82B6D5E4A0036D467 /* NetworkRequestType.swift */; };
+		265741DB2B74405D0036D467 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265741DA2B74405D0036D467 /* NetworkError.swift */; };
+		265741DD2B7478500036D467 /* APIManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265741DC2B7478500036D467 /* APIManagerProtocol.swift */; };
+		265741DF2B7478EF0036D467 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265741DE2B7478EF0036D467 /* APIManager.swift */; };
+		265741E12B747B2B0036D467 /* NetworkRequestManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265741E02B747B2B0036D467 /* NetworkRequestManagerProtocol.swift */; };
+		265741E32B747B440036D467 /* NetworkRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265741E22B747B440036D467 /* NetworkRequestManager.swift */; };
+		265741E62B747D260036D467 /* DataParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265741E52B747D260036D467 /* DataParserProtocol.swift */; };
+		265741E82B747D350036D467 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265741E72B747D350036D467 /* DataParser.swift */; };
+		265741EB2B7481910036D467 /* AuthenticationTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265741EA2B7481910036D467 /* AuthenticationTokenRequest.swift */; };
+		265741F02B7484750036D467 /* PetFinderAPIToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265741EF2B7484750036D467 /* PetFinderAPIToken.swift */; };
+		265741F22B749B210036D467 /* AnimalsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265741F12B749B210036D467 /* AnimalsRequest.swift */; };
 		265D74512B6C69630067A2A7 /* PetPurrsuitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265D74502B6C69630067A2A7 /* PetPurrsuitApp.swift */; };
 		265D74532B6C69630067A2A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265D74522B6C69630067A2A7 /* ContentView.swift */; };
 		265D74552B6C69640067A2A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 265D74542B6C69640067A2A7 /* Assets.xcassets */; };
@@ -68,6 +82,20 @@
 		265741C82B6CAB8B0036D467 /* AnimalEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalEnvironment.swift; sourceTree = "<group>"; };
 		265741CB2B6CAD290036D467 /* AnimalParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalParser.swift; sourceTree = "<group>"; };
 		265741CD2B6CB2F70036D467 /* AnimalMockData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AnimalMockData.json; sourceTree = "<group>"; };
+		265741CF2B6CB86C0036D467 /* SearchAnimalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAnimalsView.swift; sourceTree = "<group>"; };
+		265741D12B6CB9200036D467 /* AnimalsNearByView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsNearByView.swift; sourceTree = "<group>"; };
+		265741D62B6D5C720036D467 /* NetworkRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestProtocol.swift; sourceTree = "<group>"; };
+		265741D82B6D5E4A0036D467 /* NetworkRequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestType.swift; sourceTree = "<group>"; };
+		265741DA2B74405D0036D467 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		265741DC2B7478500036D467 /* APIManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerProtocol.swift; sourceTree = "<group>"; };
+		265741DE2B7478EF0036D467 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		265741E02B747B2B0036D467 /* NetworkRequestManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestManagerProtocol.swift; sourceTree = "<group>"; };
+		265741E22B747B440036D467 /* NetworkRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestManager.swift; sourceTree = "<group>"; };
+		265741E52B747D260036D467 /* DataParserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParserProtocol.swift; sourceTree = "<group>"; };
+		265741E72B747D350036D467 /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
+		265741EA2B7481910036D467 /* AuthenticationTokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTokenRequest.swift; sourceTree = "<group>"; };
+		265741EF2B7484750036D467 /* PetFinderAPIToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFinderAPIToken.swift; sourceTree = "<group>"; };
+		265741F12B749B210036D467 /* AnimalsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsRequest.swift; sourceTree = "<group>"; };
 		265D744D2B6C69630067A2A7 /* PetPurrsuit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetPurrsuit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		265D74502B6C69630067A2A7 /* PetPurrsuitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetPurrsuitApp.swift; sourceTree = "<group>"; };
 		265D74522B6C69630067A2A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -127,7 +155,10 @@
 		265741C22B6CA6C40036D467 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				265741D12B6CB9200036D467 /* AnimalsNearByView.swift */,
+				265D74522B6C69630067A2A7 /* ContentView.swift */,
 				265741C32B6CA7F80036D467 /* Search */,
+				265741CF2B6CB86C0036D467 /* SearchAnimalsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -145,6 +176,47 @@
 				265741CB2B6CAD290036D467 /* AnimalParser.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		265741D52B6D5C1C0036D467 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				265741F12B749B210036D467 /* AnimalsRequest.swift */,
+				265741DE2B7478EF0036D467 /* APIManager.swift */,
+				265741DC2B7478500036D467 /* APIManagerProtocol.swift */,
+				265741DA2B74405D0036D467 /* NetworkError.swift */,
+				265741E22B747B440036D467 /* NetworkRequestManager.swift */,
+				265741E02B747B2B0036D467 /* NetworkRequestManagerProtocol.swift */,
+				265741D62B6D5C720036D467 /* NetworkRequestProtocol.swift */,
+				265741D82B6D5E4A0036D467 /* NetworkRequestType.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		265741E42B747D090036D467 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				265741E72B747D350036D467 /* DataParser.swift */,
+				265741E52B747D260036D467 /* DataParserProtocol.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		265741E92B7481710036D467 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				265741EA2B7481910036D467 /* AuthenticationTokenRequest.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		265741EE2B7483B90036D467 /* PetfinderAPI */ = {
+			isa = PBXGroup;
+			children = (
+				265D74802B6C77210067A2A7 /* PetFinderAPIConstants.swift */,
+				265741EF2B7484750036D467 /* PetFinderAPIToken.swift */,
+			);
+			path = PetfinderAPI;
 			sourceTree = "<group>";
 		};
 		265D74442B6C69630067A2A7 = {
@@ -170,16 +242,18 @@
 		265D744F2B6C69630067A2A7 /* PetPurrsuit */ = {
 			isa = PBXGroup;
 			children = (
+				265741EE2B7483B90036D467 /* PetfinderAPI */,
+				265741E92B7481710036D467 /* Authentication */,
+				265741E42B747D090036D467 /* Parser */,
+				265741D52B6D5C1C0036D467 /* Network */,
 				265D747F2B6C73160067A2A7 /* Core Data */,
 				265741CA2B6CACD70036D467 /* Mock */,
 				265D74822B6C78A30067A2A7 /* Model */,
 				265741C12B6C97720036D467 /* Utilities */,
 				265741C22B6CA6C40036D467 /* Views */,
-				265D74522B6C69630067A2A7 /* ContentView.swift */,
 				265D74502B6C69630067A2A7 /* PetPurrsuitApp.swift */,
 				265D74542B6C69640067A2A7 /* Assets.xcassets */,
 				265D74562B6C69640067A2A7 /* Preview Content */,
-				265D74802B6C77210067A2A7 /* PetFinderAPIConstants.swift */,
 			);
 			path = PetPurrsuit;
 			sourceTree = "<group>";
@@ -383,18 +457,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				265741D02B6CB86C0036D467 /* SearchAnimalsView.swift in Sources */,
 				265D74892B6C81F10067A2A7 /* AnimalSize.swift in Sources */,
 				265D74852B6C79440067A2A7 /* AnimalBreed.swift in Sources */,
+				265741F22B749B210036D467 /* AnimalsRequest.swift in Sources */,
+				265741D22B6CB9200036D467 /* AnimalsNearByView.swift in Sources */,
+				265741DD2B7478500036D467 /* APIManagerProtocol.swift in Sources */,
 				265D745A2B6C69640067A2A7 /* Persistence.swift in Sources */,
 				265741B82B6C94160036D467 /* OrganizationInfo.swift in Sources */,
 				265D74532B6C69630067A2A7 /* ContentView.swift in Sources */,
 				265741BC2B6C94480036D467 /* Address.swift in Sources */,
 				265D748D2B6C867B0067A2A7 /* AnimalColor.swift in Sources */,
+				265741DB2B74405D0036D467 /* NetworkError.swift in Sources */,
 				265741BA2B6C94230036D467 /* ContactInfo.swift in Sources */,
 				265741CC2B6CAD290036D467 /* AnimalParser.swift in Sources */,
+				265741E12B747B2B0036D467 /* NetworkRequestManagerProtocol.swift in Sources */,
 				265D74912B6C88A00067A2A7 /* AnimalAdoptionStatus.swift in Sources */,
+				265741F02B7484750036D467 /* PetFinderAPIToken.swift in Sources */,
+				265741D92B6D5E4A0036D467 /* NetworkRequestType.swift in Sources */,
 				265D748F2B6C87590067A2A7 /* AnimalCoat.swift in Sources */,
 				265D74932B6C8A690067A2A7 /* AnimalBehaviorAttributes.swift in Sources */,
+				265741E32B747B440036D467 /* NetworkRequestManager.swift in Sources */,
 				265741C52B6CA9770036D467 /* Animal.swift in Sources */,
 				265741B32B6C91BC0036D467 /* AnimalDetails.swift in Sources */,
 				265741B52B6C920A0036D467 /* AnimalAge.swift in Sources */,
@@ -402,11 +485,16 @@
 				265D74512B6C69630067A2A7 /* PetPurrsuitApp.swift in Sources */,
 				265741C72B6CAABE0036D467 /* AnimalVideo.swift in Sources */,
 				265D74952B6C8C6B0067A2A7 /* Pagination.swift in Sources */,
+				265741E82B747D350036D467 /* DataParser.swift in Sources */,
 				265D74872B6C7FFA0067A2A7 /* AnimalType.swift in Sources */,
 				265D745D2B6C69640067A2A7 /* PetPurrsuit.xcdatamodeld in Sources */,
 				265D74812B6C77210067A2A7 /* PetFinderAPIConstants.swift in Sources */,
 				265D748B2B6C85600067A2A7 /* AnimalGender.swift in Sources */,
 				265741BE2B6C96100036D467 /* AnimalPhotoSizes.swift in Sources */,
+				265741DF2B7478EF0036D467 /* APIManager.swift in Sources */,
+				265741E62B747D260036D467 /* DataParserProtocol.swift in Sources */,
+				265741EB2B7481910036D467 /* AuthenticationTokenRequest.swift in Sources */,
+				265741D72B6D5C720036D467 /* NetworkRequestProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
