@@ -16,8 +16,8 @@ enum AuthenticationTokenRequest: NetworkRequestProtocol {
     var requestParams: [String : Any] {
         [
             "grant_type": PetFinderAPIConstants.grantType,
-            "client_id" : PetFinderAPIConstants.clientID,
-            "client": PetFinderAPIConstants.clientSecret
+            "client_id" : PetFinderAPIConstants.clientId,
+            "client_secret": PetFinderAPIConstants.clientSecret
 
         ]
     }

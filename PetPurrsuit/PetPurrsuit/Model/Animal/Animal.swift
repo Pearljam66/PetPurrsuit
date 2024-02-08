@@ -9,9 +9,9 @@ import Foundation
 
 struct Animal: Codable {
     var id: Int?
-    let organizationID: String?
+    let organizationId: String?
     let url: URL?
-    let type: String?
+    let type: String
     let species: String?
     var breeds: AnimalBreed
     var colors: AnimalColor
@@ -23,12 +23,19 @@ struct Animal: Codable {
     let description: String?
     let photos: [AnimalPhotoSizes]
     let videos: [AnimalVideo]
-    let adoptionStatus: AnimalAdoptionStatus
-    var behaviorAttributes: AnimalBehaviorAttributes
+    let status: AnimalAdoptionStatus
+    var attributes: AnimalBehaviorAttributes
     var environment: AnimalEnvironment?
     let tags: [String]
     var contact: ContactInfo
     let publishedAt: String?
     let distance: Double?
     var ranking: Int? = 0
+
+    var picture: URL? {
+        photos.first?.medium ?? photos.first?.large
+    }
+}
+
+extension Animal: Identifiable {
 }

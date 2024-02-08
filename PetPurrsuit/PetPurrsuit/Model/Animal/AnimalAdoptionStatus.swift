@@ -7,8 +7,8 @@
 
 /// The default is adoptable
 enum AnimalAdoptionStatus: String, Codable {
-    case adoptable = "adoptable"
-    case adopted = "adopted"
-    case found = "found"
-    case unknown = "unknown"
+    case adoptable
+    case adopted
+    case found
+    case unknown
 }

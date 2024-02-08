@@ -8,10 +8,12 @@
 final class NetworkRequestManager: NetworkRequestManagerProtocol {
     let apiManager: APIManagerProtocol
     let parser: DataParserProtocol
+    let accessTokenManager: AccessTokenManagerProtocol
 
-    init(apiManager: APIManagerProtocol = APIManager(), parser: DataParserProtocol = DataParser()) {
+    init(apiManager: APIManagerProtocol = APIManager(), parser: DataParserProtocol = DataParser(), accessTokenManager: AccessTokenManagerProtocol = AccessTokenManager()) {
         self.apiManager = apiManager
         self.parser = parser
+        self.accessTokenManager = accessTokenManager
     }
 
     func perform<T: Decodable>(_ request: NetworkRequestProtocol) async throws -> T {
@@ -22,8 +24,13 @@ final class NetworkRequestManager: NetworkRequestManagerProtocol {
     }
 
     func requestAccessToken() async throws -> String {
+        if accessTokenManager.isTokenValid() {
+            return accessTokenManager.fetchToken()
+        }
+
         let data = try await apiManager.requestToken()
         let token: PetFinderAPIToken = try parser.parse(data: data)
+        try accessTokenManager.refreshWith(apiToken: token)
         return token.bearerAccessToken
     }
 }

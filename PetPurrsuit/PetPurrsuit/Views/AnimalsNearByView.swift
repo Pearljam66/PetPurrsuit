@@ -8,11 +8,50 @@
 import SwiftUI
 
 struct AnimalsNearByView: View {
+    @State var animals: [Animal] = []
+    @State var isLoading = true
+    private let networkRequestManager = NetworkRequestManager()
+
     var body: some View {
-        Text("AnimalsNearByView")
+        NavigationView {
+            List {
+                ForEach(animals) { animal in
+                    AnimalRowView(animal: animal)
+                }
+            }
+            .task {
+                await fetchAnimals()
+            }
+            .listStyle(.plain)
+            .navigationTitle("Animals near by")
+            .overlay {
+                if isLoading {
+                    ProgressView("Finding animals near you")
+                }
+            }
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
+    }
+
+    func fetchAnimals() async {
+        do {
+            let animalContainer: AnimalContainer = try await networkRequestManager.perform(AnimalsRequest.getAnimals(page: 1, latitude: nil, longitude: nil))
+            let animals = animalContainer.animals
+            self.animals = animals
+            await stopLoading()
+        } catch {
+
+        }
+    }
+
+    @MainActor
+    func stopLoading() async {
+        isLoading = false
     }
 }
 
-#Preview {
-    AnimalsNearByView()
+struct AnimalsNearYouView_Previews: PreviewProvider {
+    static var previews: some View {
+        AnimalsNearByView(animals: Animal.animalMock, isLoading: false)
+    }
 }
