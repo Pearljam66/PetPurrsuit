@@ -28,6 +28,7 @@ extension PetFinderAPIToken {
     }
 
     var bearerAccessToken: String {
-        "\(tokenType) \(accessToken)"
+        let expirationTime = expiresAt.timeIntervalSince1970
+        return "\(tokenType) \(accessToken) \(expirationTime)"
     }
 }

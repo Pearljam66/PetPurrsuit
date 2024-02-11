@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		264681FE2B781E06008FAB39 /* AccessTokenMockHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264681FD2B781E06008FAB39 /* AccessTokenMockHelper.swift */; };
+		264682002B782742008FAB39 /* AnimalsRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264681FF2B782742008FAB39 /* AnimalsRequestMock.swift */; };
+		264682022B782CDB008FAB39 /* NetworkRequestManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264682012B782CDB008FAB39 /* NetworkRequestManagerTests.swift */; };
+		264682042B784550008FAB39 /* AccessTokenManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264682032B784550008FAB39 /* AccessTokenManagerTests.swift */; };
+		264682082B785D0D008FAB39 /* AccessTokenManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264682072B785D0D008FAB39 /* AccessTokenManagerMock.swift */; };
+		26543B322B74CAC700BC7E7A /* PetFinderAPIManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26543B312B74CAC700BC7E7A /* PetFinderAPIManagerMock.swift */; };
 		265741B32B6C91BC0036D467 /* AnimalDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265741B22B6C91BC0036D467 /* AnimalDetails.swift */; };
 		265741B52B6C920A0036D467 /* AnimalAge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265741B42B6C920A0036D467 /* AnimalAge.swift */; };
 		265741B82B6C94160036D467 /* OrganizationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265741B72B6C94160036D467 /* OrganizationInfo.swift */; };
@@ -38,7 +44,6 @@
 		265741FC2B74AC940036D467 /* AccessTokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265741FB2B74AC940036D467 /* AccessTokenManager.swift */; };
 		265741FE2B74AF160036D467 /* AppUserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265741FD2B74AF160036D467 /* AppUserDefaultsKeys.swift */; };
 		265741FF2B74B4080036D467 /* AnimalMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 265741CD2B6CB2F70036D467 /* AnimalMockData.json */; };
-		265742002B74B4090036D467 /* AnimalMockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 265741CD2B6CB2F70036D467 /* AnimalMockData.json */; };
 		265D74512B6C69630067A2A7 /* PetPurrsuitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265D74502B6C69630067A2A7 /* PetPurrsuitApp.swift */; };
 		265D74532B6C69630067A2A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265D74522B6C69630067A2A7 /* ContentView.swift */; };
 		265D74552B6C69640067A2A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 265D74542B6C69640067A2A7 /* Assets.xcassets */; };
@@ -78,6 +83,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		264681FD2B781E06008FAB39 /* AccessTokenMockHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenMockHelper.swift; sourceTree = "<group>"; };
+		264681FF2B782742008FAB39 /* AnimalsRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsRequestMock.swift; sourceTree = "<group>"; };
+		264682012B782CDB008FAB39 /* NetworkRequestManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestManagerTests.swift; sourceTree = "<group>"; };
+		264682032B784550008FAB39 /* AccessTokenManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenManagerTests.swift; sourceTree = "<group>"; };
+		264682072B785D0D008FAB39 /* AccessTokenManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenManagerMock.swift; sourceTree = "<group>"; };
+		26543B312B74CAC700BC7E7A /* PetFinderAPIManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFinderAPIManagerMock.swift; sourceTree = "<group>"; };
 		265741B22B6C91BC0036D467 /* AnimalDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetails.swift; sourceTree = "<group>"; };
 		265741B42B6C920A0036D467 /* AnimalAge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalAge.swift; sourceTree = "<group>"; };
 		265741B72B6C94160036D467 /* OrganizationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationInfo.swift; sourceTree = "<group>"; };
@@ -157,6 +168,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		264682092B786935008FAB39 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				264682072B785D0D008FAB39 /* AccessTokenManagerMock.swift */,
+				264681FD2B781E06008FAB39 /* AccessTokenMockHelper.swift */,
+				264681FF2B782742008FAB39 /* AnimalsRequestMock.swift */,
+				26543B312B74CAC700BC7E7A /* PetFinderAPIManagerMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		2646820A2B78693C008FAB39 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				264682032B784550008FAB39 /* AccessTokenManagerTests.swift */,
+				264682012B782CDB008FAB39 /* NetworkRequestManagerTests.swift */,
+				265D74662B6C69640067A2A7 /* PetPurrsuitTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		265741C12B6C97720036D467 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,9 +251,9 @@
 		265741E92B7481710036D467 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				265741EA2B7481910036D467 /* AuthenticationTokenRequest.swift */,
-				265741F92B74AC310036D467 /* AccessTokenManagerProtocol.swift */,
 				265741FB2B74AC940036D467 /* AccessTokenManager.swift */,
+				265741F92B74AC310036D467 /* AccessTokenManagerProtocol.swift */,
+				265741EA2B7481910036D467 /* AuthenticationTokenRequest.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -258,6 +290,7 @@
 		265D744F2B6C69630067A2A7 /* PetPurrsuit */ = {
 			isa = PBXGroup;
 			children = (
+				265D74502B6C69630067A2A7 /* PetPurrsuitApp.swift */,
 				265741EE2B7483B90036D467 /* PetfinderAPI */,
 				265741E92B7481710036D467 /* Authentication */,
 				265741E42B747D090036D467 /* Parser */,
@@ -267,7 +300,6 @@
 				265D74822B6C78A30067A2A7 /* Model */,
 				265741C12B6C97720036D467 /* Utilities */,
 				265741C22B6CA6C40036D467 /* Views */,
-				265D74502B6C69630067A2A7 /* PetPurrsuitApp.swift */,
 				265D74542B6C69640067A2A7 /* Assets.xcassets */,
 				265D74562B6C69640067A2A7 /* Preview Content */,
 			);
@@ -286,7 +318,8 @@
 		265D74652B6C69640067A2A7 /* PetPurrsuitTests */ = {
 			isa = PBXGroup;
 			children = (
-				265D74662B6C69640067A2A7 /* PetPurrsuitTests.swift */,
+				264682092B786935008FAB39 /* Mocks */,
+				2646820A2B78693C008FAB39 /* Tests */,
 			);
 			path = PetPurrsuitTests;
 			sourceTree = "<group>";
@@ -465,7 +498,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				265742002B74B4090036D467 /* AnimalMockData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,7 +558,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				264681FE2B781E06008FAB39 /* AccessTokenMockHelper.swift in Sources */,
+				264682042B784550008FAB39 /* AccessTokenManagerTests.swift in Sources */,
+				26543B322B74CAC700BC7E7A /* PetFinderAPIManagerMock.swift in Sources */,
 				265D74672B6C69640067A2A7 /* PetPurrsuitTests.swift in Sources */,
+				264682082B785D0D008FAB39 /* AccessTokenManagerMock.swift in Sources */,
+				264682002B782742008FAB39 /* AnimalsRequestMock.swift in Sources */,
+				264682022B782CDB008FAB39 /* NetworkRequestManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

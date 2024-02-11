@@ -5,8 +5,8 @@
 //  Created by Sarah Clark on 2/1/24.
 //
 
-import SwiftUI
 import CoreData
+import SwiftUI
 
 struct ContentView: View {
     var body: some View {
