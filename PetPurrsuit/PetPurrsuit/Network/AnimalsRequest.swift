@@ -16,11 +16,15 @@ enum AnimalsRequest: NetworkRequestProtocol {
 
     var urlQueryParams: [String: String?] {
         switch self {
-            case let .getAnimals(page, latitude, longitude):
-                return buildGetAnimalsParams(page: page, latitude: latitude, longitude: longitude)
+        case let .getAnimals(page, latitude, longitude):
+            return buildGetAnimalsParams(page: page,
+                                        latitude: latitude,
+                                        longitude: longitude)
 
-            case let .searchAnimals(name, age, type):
-                return buildSearchAnimalsParams(name: name, age: age, type: type)
+        case let .searchAnimals(name, age, type):
+            return buildSearchAnimalsParams(name: name,
+                                            age: age,
+                                            type: type)
         }
     }
 

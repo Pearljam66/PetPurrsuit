@@ -41,4 +41,3 @@ class AccessTokenManagerMock: AccessTokenManagerProtocol {
         expiresAt = apiToken.expiresAt
     }
 }
-

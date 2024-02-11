@@ -19,7 +19,9 @@ enum AnimalsRequestMock: NetworkRequestProtocol {
     var endpointPath: String {
         do {
             guard let path = Bundle.main.path(forResource: "AnimalMockData", ofType: "json") else {
-                throw NSError(domain: "AnimalsRequestMock", code: 404, userInfo: [NSLocalizedDescriptionKey: "AnimalMockData.json not found."])
+                throw NSError(domain: "AnimalsRequestMock",
+                              code: 404,
+                              userInfo: [NSLocalizedDescriptionKey: "AnimalMockData.json not found."])
             }
             return path
         } catch {

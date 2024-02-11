@@ -12,7 +12,7 @@ struct AnimalRowView: View {
 
     var body: some View {
         HStack {
-            AsyncImage (url: animal.picture) { image in
+            AsyncImage(url: animal.picture) { image in
                 image
                     .resizable()
             } placeholder: {

@@ -10,7 +10,9 @@ final class NetworkRequestManager: NetworkRequestManagerProtocol {
     let parser: DataParserProtocol
     let accessTokenManager: AccessTokenManagerProtocol
 
-    init(apiManager: APIManagerProtocol = APIManager(), parser: DataParserProtocol = DataParser(), accessTokenManager: AccessTokenManagerProtocol = AccessTokenManager()) {
+    init(apiManager: APIManagerProtocol = APIManager(),
+         parser: DataParserProtocol = DataParser(),
+         accessTokenManager: AccessTokenManagerProtocol = AccessTokenManager()) {
         self.apiManager = apiManager
         self.parser = parser
         self.accessTokenManager = accessTokenManager

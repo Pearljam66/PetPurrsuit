@@ -13,10 +13,10 @@ public enum NetworkError: LocalizedError {
 
     public var errorDescription: String? {
         switch self {
-            case .invalidServerResponse:
-                return "Server returned an invalid response"
-            case .invalidURL:
-                return "URL string is invalid"
+        case .invalidServerResponse:
+            return "Server returned an invalid response"
+        case .invalidURL:
+            return "URL string is invalid"
         }
     }
 }

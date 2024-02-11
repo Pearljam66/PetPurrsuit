@@ -23,7 +23,7 @@ extension AccessTokenManager: AccessTokenManagerProtocol {
         guard let token = accessToken else { return "" }
         return token
     }
-    
+
     func refreshWith(apiToken: PetFinderAPIToken) throws {
         let expiresAt = apiToken.expiresAt
         let token = apiToken.bearerAccessToken
@@ -32,7 +32,7 @@ extension AccessTokenManager: AccessTokenManagerProtocol {
         self.expiresAt = expiresAt
         self.accessToken = token
     }
-    
+
     func isTokenValid() -> Bool {
         update()
         return accessToken != nil && expiresAt.compare(Date()) == .orderedDescending

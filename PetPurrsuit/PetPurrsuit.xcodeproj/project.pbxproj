@@ -88,6 +88,7 @@
 		264682012B782CDB008FAB39 /* NetworkRequestManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestManagerTests.swift; sourceTree = "<group>"; };
 		264682032B784550008FAB39 /* AccessTokenManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenManagerTests.swift; sourceTree = "<group>"; };
 		264682072B785D0D008FAB39 /* AccessTokenManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenManagerMock.swift; sourceTree = "<group>"; };
+		264682102B788691008FAB39 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		26543B312B74CAC700BC7E7A /* PetFinderAPIManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFinderAPIManagerMock.swift; sourceTree = "<group>"; };
 		265741B22B6C91BC0036D467 /* AnimalDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetails.swift; sourceTree = "<group>"; };
 		265741B42B6C920A0036D467 /* AnimalAge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalAge.swift; sourceTree = "<group>"; };
@@ -270,6 +271,7 @@
 		265D74442B6C69630067A2A7 = {
 			isa = PBXGroup;
 			children = (
+				264682102B788691008FAB39 /* .swiftlint.yml */,
 				265D744F2B6C69630067A2A7 /* PetPurrsuit */,
 				265D74652B6C69640067A2A7 /* PetPurrsuitTests */,
 				265D746F2B6C69640067A2A7 /* PetPurrsuitUITests */,
@@ -386,6 +388,7 @@
 				265D74492B6C69630067A2A7 /* Sources */,
 				265D744A2B6C69630067A2A7 /* Frameworks */,
 				265D744B2B6C69630067A2A7 /* Resources */,
+				2646820B2B787D12008FAB39 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -502,6 +505,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2646820B2B787D12008FAB39 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		265D74492B6C69630067A2A7 /* Sources */ = {
@@ -722,6 +745,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PetPurrsuit/Preview Content\"";
 				DEVELOPMENT_TEAM = P92GSKWU9W;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "PetPurrsuit uses your location to find animals near by.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -753,6 +777,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PetPurrsuit/Preview Content\"";
 				DEVELOPMENT_TEAM = P92GSKWU9W;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "PetPurrsuit uses your location to find animals near by.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

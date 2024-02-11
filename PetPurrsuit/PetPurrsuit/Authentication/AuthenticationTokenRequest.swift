@@ -13,12 +13,11 @@ enum AuthenticationTokenRequest: NetworkRequestProtocol {
         "/v2/oauth2/token"
     }
 
-    var requestParams: [String : Any] {
+    var requestParams: [String: Any] {
         [
             "grant_type": PetFinderAPIConstants.grantType,
-            "client_id" : PetFinderAPIConstants.clientId,
+            "client_id": PetFinderAPIConstants.clientId,
             "client_secret": PetFinderAPIConstants.clientSecret
-
         ]
     }
 

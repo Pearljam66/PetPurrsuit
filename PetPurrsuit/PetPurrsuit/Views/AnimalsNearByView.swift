@@ -35,7 +35,8 @@ struct AnimalsNearByView: View {
 
     func fetchAnimals() async {
         do {
-            let animalContainer: AnimalContainer = try await networkRequestManager.perform(AnimalsRequest.getAnimals(page: 1, latitude: nil, longitude: nil))
+            let animalContainer: AnimalContainer = try await networkRequestManager.perform(
+                AnimalsRequest.getAnimals(page: 1, latitude: nil, longitude: nil))
             let animals = animalContainer.animals
             self.animals = animals
             await stopLoading()

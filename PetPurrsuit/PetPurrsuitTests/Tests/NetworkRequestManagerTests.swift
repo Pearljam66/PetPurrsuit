@@ -17,11 +17,14 @@ class NetworkRequestManagerTests: XCTestCase {
 
         guard let userDefaults = UserDefaults(suiteName: #file) else { return }
         userDefaults.removePersistentDomain(forName: #file)
-        networkRequestManager = NetworkRequestManager(apiManager: PetFinderAPIManagerMock(), accessTokenManager: AccessTokenManager(userDefaults: userDefaults))
+        networkRequestManager = NetworkRequestManager(
+                                apiManager: PetFinderAPIManagerMock(),
+                                accessTokenManager: AccessTokenManager(userDefaults: userDefaults))
     }
 
     func testRequestAnimals() async throws {
-        guard let container: AnimalContainer = try await networkRequestManager?.perform(AnimalsRequestMock.getAnimals) else {
+        guard let container: AnimalContainer = try await
+                networkRequestManager?.perform(AnimalsRequestMock.getAnimals) else {
             XCTFail("No data returned from the NetworkRequestManager.")
             return
         }

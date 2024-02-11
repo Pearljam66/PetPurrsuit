@@ -15,7 +15,8 @@ enum AccessTokenMockHelper {
     }
 
     static func randomAPIToken() -> PetFinderAPIToken {
-        return PetFinderAPIToken(accessToken: AccessTokenMockHelper.mockAccessToken(), expiresIn: 10, tokenType: "Bearer")
+        return PetFinderAPIToken(accessToken: AccessTokenMockHelper.mockAccessToken(),
+                                 expiresIn: 10, tokenType: "Bearer")
     }
 
     static func generateValidToken() -> String {
