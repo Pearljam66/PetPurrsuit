@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		263AE4CA2B8781310033CF3C /* AnimalEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263AE4C92B8781310033CF3C /* AnimalEntity.swift */; };
+		263AE4CD2B87B4810033CF3C /* CoreDataPersistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263AE4CC2B87B4810033CF3C /* CoreDataPersistable.swift */; };
 		264681FE2B781E06008FAB39 /* AccessTokenMockHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264681FD2B781E06008FAB39 /* AccessTokenMockHelper.swift */; };
 		264682002B782742008FAB39 /* AnimalsRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264681FF2B782742008FAB39 /* AnimalsRequestMock.swift */; };
 		264682022B782CDB008FAB39 /* NetworkRequestManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264682012B782CDB008FAB39 /* NetworkRequestManagerTests.swift */; };
@@ -83,6 +85,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		263AE4C92B8781310033CF3C /* AnimalEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalEntity.swift; sourceTree = "<group>"; };
+		263AE4CC2B87B4810033CF3C /* CoreDataPersistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistable.swift; sourceTree = "<group>"; };
 		264681FD2B781E06008FAB39 /* AccessTokenMockHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenMockHelper.swift; sourceTree = "<group>"; };
 		264681FF2B782742008FAB39 /* AnimalsRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsRequestMock.swift; sourceTree = "<group>"; };
 		264682012B782CDB008FAB39 /* NetworkRequestManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestManagerTests.swift; sourceTree = "<group>"; };
@@ -168,6 +172,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		263AE4CB2B87B4580033CF3C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				263AE4C92B8781310033CF3C /* AnimalEntity.swift */,
+				263AE4CC2B87B4810033CF3C /* CoreDataPersistable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		264682092B786935008FAB39 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,11 +304,11 @@
 			isa = PBXGroup;
 			children = (
 				265D74502B6C69630067A2A7 /* PetPurrsuitApp.swift */,
-				265741EE2B7483B90036D467 /* PetfinderAPI */,
 				265741E92B7481710036D467 /* Authentication */,
+				265D747F2B6C73160067A2A7 /* Core Data */,
+				265741EE2B7483B90036D467 /* PetfinderAPI */,
 				265741E42B747D090036D467 /* Parser */,
 				265741D52B6D5C1C0036D467 /* Network */,
-				265D747F2B6C73160067A2A7 /* Core Data */,
 				265741CA2B6CACD70036D467 /* Mock */,
 				265D74822B6C78A30067A2A7 /* Model */,
 				265741C12B6C97720036D467 /* Utilities */,
@@ -337,6 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				265D745B2B6C69640067A2A7 /* PetPurrsuit.xcdatamodeld */,
+				263AE4CB2B87B4580033CF3C /* Extensions */,
 				265D74592B6C69640067A2A7 /* Persistence.swift */,
 			);
 			path = "Core Data";
@@ -544,7 +558,9 @@
 				265741BA2B6C94230036D467 /* ContactInfo.swift in Sources */,
 				265741FA2B74AC310036D467 /* AccessTokenManagerProtocol.swift in Sources */,
 				265741E12B747B2B0036D467 /* NetworkRequestManagerProtocol.swift in Sources */,
+				263AE4CD2B87B4810033CF3C /* CoreDataPersistable.swift in Sources */,
 				265D74912B6C88A00067A2A7 /* AnimalAdoptionStatus.swift in Sources */,
+				263AE4CA2B8781310033CF3C /* AnimalEntity.swift in Sources */,
 				265741F02B7484750036D467 /* PetFinderAPIToken.swift in Sources */,
 				265741D92B6D5E4A0036D467 /* NetworkRequestType.swift in Sources */,
 				265D748F2B6C87590067A2A7 /* AnimalCoat.swift in Sources */,
