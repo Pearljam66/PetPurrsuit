@@ -57,4 +57,20 @@ struct PersistenceController {
         })
         container.viewContext.automaticallyMergesChangesFromParent = true
     }
+
+    static func saveContent() {
+        let context = PersistenceController.shared.container.viewContext
+        guard context.hasChanges else { return }
+
+        do {
+            try context.save()
+        } catch {
+            fatalError("""
+            \(#file),\
+            \(#function),\
+            \(error.localizedDescription)
+            """)
+        }
+    }
+
 }

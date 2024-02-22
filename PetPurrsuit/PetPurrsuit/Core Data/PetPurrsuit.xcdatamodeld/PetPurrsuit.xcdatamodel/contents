@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23C71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23D60" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="AddressEntity" representedClassName="AddressEntity" syncable="YES" codeGenerationType="class">
         <attribute name="address1" optional="YES" attributeType="String"/>
         <attribute name="address2" optional="YES" attributeType="String"/>
@@ -27,24 +27,25 @@
         <relationship name="animal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AnimalEntity" inverseName="animalColors" inverseEntity="AnimalEntity"/>
     </entity>
     <entity name="AnimalEntity" representedClassName="AnimalEntity" syncable="YES" codeGenerationType="class">
-        <attribute name="age" optional="YES" attributeType="String"/>
+        <attribute name="ageValue" optional="YES" attributeType="String"/>
         <attribute name="animalDescription" optional="YES" attributeType="String"/>
-        <attribute name="coat" optional="YES" attributeType="String"/>
+        <attribute name="coatValue" optional="YES" attributeType="String"/>
         <attribute name="distance" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="gender" optional="YES" attributeType="String"/>
+        <attribute name="genderValue" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="organizationId" optional="YES" attributeType="String"/>
         <attribute name="publishedAt" optional="YES" attributeType="String"/>
         <attribute name="ranking" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="size" optional="YES" attributeType="String"/>
+        <attribute name="sizeValue" optional="YES" attributeType="String"/>
         <attribute name="species" optional="YES" attributeType="String"/>
-        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="statusValue" optional="YES" attributeType="String"/>
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="type" optional="YES" attributeType="String"/>
         <attribute name="url" optional="YES" attributeType="URI"/>
         <relationship name="animalColors" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AnimalColorsEntity" inverseName="animal" inverseEntity="AnimalColorsEntity"/>
         <relationship name="behaviorAttributes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AnimalBehaviorAttributesEntity" inverseName="animal" inverseEntity="AnimalBehaviorAttributesEntity"/>
+        <relationship name="breeds" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BreedEntity" inverseName="animal" inverseEntity="BreedEntity"/>
         <relationship name="contactInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ContactInfoEntity" inverseName="animal" inverseEntity="ContactInfoEntity"/>
         <relationship name="environment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AnimalEnvironmentEntity" inverseName="animal" inverseEntity="AnimalEnvironmentEntity"/>
         <relationship name="photoSizes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhotoSizesEntity" inverseName="animal" inverseEntity="PhotoSizesEntity"/>
@@ -63,6 +64,7 @@
         <attribute name="primary" optional="YES" attributeType="String"/>
         <attribute name="secondary" optional="YES" attributeType="String"/>
         <attribute name="unknown" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="animal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AnimalEntity" inverseName="breeds" inverseEntity="AnimalEntity"/>
     </entity>
     <entity name="ContactInfoEntity" representedClassName="ContactInfoEntity" syncable="YES" codeGenerationType="class">
         <attribute name="email" optional="YES" attributeType="String"/>
