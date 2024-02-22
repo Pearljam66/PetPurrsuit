@@ -34,7 +34,7 @@ extension CoreDataPersistable where ManagedType: NSManagedObject {
             guard let managedObject = managedObject else { return }
 
             for attribute in managedObject.entity.attributesByName {
-                if let keyPathValuePair = keyMap.first (where: { $0.value == attribute.key })?.key {
+                if let keyPathValuePair = keyMap.first(where: { $0.value == attribute.key })?.key {
                         let value = managedObject.value(forKey: attribute.key)
                         storeValue(value, toKeyPath: keyPathValuePair)
                     }
@@ -43,16 +43,16 @@ extension CoreDataPersistable where ManagedType: NSManagedObject {
 
     private mutating func storeValue(_ value: Any?, toKeyPath partial: AnyKeyPath) {
         switch partial {
-            case let keyPath as WritableKeyPath<Self, URL?>:
-                self[keyPath: keyPath] = value as? URL
-            case let keyPath as WritableKeyPath<Self, Int?>:
-                self[keyPath: keyPath] = value as? Int
-            case let KeyPath as WritableKeyPath<Self, String?>:
-                self[keyPath: KeyPath] = value as? String
-            case let KeyPath as WritableKeyPath<Self, Bool?>:
-                self[keyPath: KeyPath] = value as? Bool
-            default:
-                return
+        case let keyPath as WritableKeyPath<Self, URL?>:
+            self[keyPath: keyPath] = value as? URL
+        case let keyPath as WritableKeyPath<Self, Int?>:
+            self[keyPath: keyPath] = value as? Int
+        case let keyPath as WritableKeyPath<Self, String?>:
+            self[keyPath: keyPath] = value as? String
+        case let keyPath as WritableKeyPath<Self, Bool?>:
+            self[keyPath: keyPath] = value as? Bool
+        default:
+            return
         }
 
         }

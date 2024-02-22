@@ -21,7 +21,8 @@ extension AnimalEntity {
 
     var coat: AnimalCoat {
         get {
-            guard let coatValue = coatValue, let coat = AnimalCoat(rawValue: coatValue) else { return AnimalCoat.unknown }
+            guard let coatValue = coatValue,
+                  let coat = AnimalCoat(rawValue: coatValue) else { return AnimalCoat.unknown }
             return coat
         }
         set {
@@ -31,7 +32,8 @@ extension AnimalEntity {
 
     var gender: AnimalGender {
         get {
-            guard let genderValue = genderValue, let gender = AnimalGender(rawValue: genderValue) else { return AnimalGender.unknown }
+            guard let genderValue = genderValue,
+                  let gender = AnimalGender(rawValue: genderValue) else { return AnimalGender.unknown }
             return gender
         }
         set {
@@ -41,7 +43,8 @@ extension AnimalEntity {
 
     var size: AnimalSize {
         get {
-            guard let sizeValue = sizeValue, let size = AnimalSize(rawValue: sizeValue) else { return AnimalSize.unknown }
+            guard let sizeValue = sizeValue,
+                  let size = AnimalSize(rawValue: sizeValue) else { return AnimalSize.unknown }
             return size
         }
         set {
@@ -51,7 +54,8 @@ extension AnimalEntity {
 
     var status: AnimalAdoptionStatus {
         get {
-            guard let statusValue = statusValue, let status = AnimalAdoptionStatus(rawValue: statusValue) else { return AnimalAdoptionStatus.unknown }
+            guard let statusValue = statusValue,
+                  let status = AnimalAdoptionStatus(rawValue: statusValue) else { return AnimalAdoptionStatus.unknown }
             return status
         }
         set {
