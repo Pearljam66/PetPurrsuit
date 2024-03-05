@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AnimalRowView: View {
-    let animal: Animal
+    let animal: AnimalEntity
 
     var body: some View {
         HStack {
@@ -31,7 +31,7 @@ struct AnimalRowView: View {
             .cornerRadius(8)
 
             VStack(alignment: .leading) {
-                Text(animal.name)
+                Text(animal.name ?? "No animal name available")
                     .multilineTextAlignment(.center)
                     .font(.title3)
             }
@@ -42,7 +42,7 @@ struct AnimalRowView: View {
 
 struct AnimalRowView_Previews: PreviewProvider {
     static var previews: some View {
-        if let animal = Animal.animalMock.first {
+        if let animal = CoreDataHelper.getTestAnimalEntity() {
             AnimalRowView(animal: animal)
         } else {
             Text("No animal data available")

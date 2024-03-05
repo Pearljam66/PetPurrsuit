@@ -13,16 +13,15 @@ struct PersistenceController {
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        for integer in 0..<10 {
-            var animal = Animal.animalMock[integer]
+        // swiftlint:disable identifier_name
+        for i in 0..<10 {
+        // swiftlint:enable identifier_name
+            var animal = Animal.animalMock[i]
             animal.convertToManagedCoreObject(context: viewContext)
         }
         do {
             try viewContext.save()
         } catch {
-            // Replace this implementation with code to handle the error appropriately.
-            // fatalError() causes the application to generate a crash log and terminate.
-            // You should not use this function in a shipping application, although it may be useful during development.
             let nsError = error as NSError
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
