@@ -14,32 +14,24 @@ protocol UUIDIdentifiable: Identifiable {
 protocol CoreDataPersistable: UUIDIdentifiable {
 
     associatedtype ManagedType
-
     init()
-
     init(managedObject: ManagedType?)
-
     var keyMap: [PartialKeyPath<Self>: String] { get }
-
-    mutating func saveStructToCoreDataStore(context: NSManagedObjectContext) -> ManagedType
-
+    mutating func convertToManagedCoreObject(context: NSManagedObjectContext) -> ManagedType
     func save(context: NSManagedObjectContext) throws
 }
 
 extension CoreDataPersistable where ManagedType: NSManagedObject {
-
-        init(managedObject: ManagedType?) {
-            self.init()
-
-            guard let managedObject = managedObject else { return }
-
-            for attribute in managedObject.entity.attributesByName {
-                if let keyPathValuePair = keyMap.first(where: { $0.value == attribute.key })?.key {
-                        let value = managedObject.value(forKey: attribute.key)
-                        storeValue(value, toKeyPath: keyPathValuePair)
-                    }
-                }
+    init(managedObject: ManagedType?) {
+        self.init()
+        guard let managedObject = managedObject else { return }
+        for attribute in managedObject.entity.attributesByName {  // this gets attributes, not relationships
+            if let keyP = keyMap.first(where: { $0.value == attribute.key })?.key {
+                let value = managedObject.value(forKey: attribute.key)
+                storeValue(value, toKeyPath: keyP)
             }
+        }
+    }
 
     private mutating func storeValue(_ value: Any?, toKeyPath partial: AnyKeyPath) {
         switch partial {
@@ -51,10 +43,46 @@ extension CoreDataPersistable where ManagedType: NSManagedObject {
             self[keyPath: keyPath] = value as? String
         case let keyPath as WritableKeyPath<Self, Bool?>:
             self[keyPath: keyPath] = value as? Bool
+
         default:
             return
         }
+    }
 
+    mutating func convertToManagedCoreObject(context: NSManagedObjectContext = PersistenceController.shared.container.viewContext) -> ManagedType {
+        let persistedValue: ManagedType
+        if let id = self.id {
+            let fetchRequest = ManagedType.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "id = %@", id as CVarArg)
+            if let results = try? context.fetch(fetchRequest),
+               let firstResult = results.first as? ManagedType {
+                persistedValue = firstResult
+            } else {
+                persistedValue = ManagedType.init(context: context)
+                self.id = persistedValue.value(forKey: "id") as? Int
+            }
+        } else {
+            persistedValue = ManagedType.init(context: context)
+            self.id = persistedValue.value(forKey: "id") as? Int
         }
+
+        return setValuesFromMirror(persistedValue: persistedValue)
+    }
+
+    private func setValuesFromMirror(persistedValue: ManagedType) -> ManagedType {
+        let mirror = Mirror(reflecting: self)
+        for case let (label?, value) in mirror.children {
+            let value2 = Mirror(reflecting: value)
+            if value2.displayStyle != .optional || !value2.children.isEmpty {
+                persistedValue.setValue(value, forKey: label)
+            }
+        }
+
+        return persistedValue
+    }
+
+    func save(context: NSManagedObjectContext = PersistenceController.shared.container.viewContext) throws {
+        try context.save()
+    }
 
 }

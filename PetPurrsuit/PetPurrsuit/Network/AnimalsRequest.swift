@@ -7,7 +7,6 @@
 
 enum AnimalsRequest: NetworkRequestProtocol {
     case getAnimals(page: Int, latitude: Double?, longitude: Double?)
-    // TODO: Possibly need to rewrite this.
     case searchAnimals(name: String, age: String?, type: String?)
 
     var endpointPath: String {

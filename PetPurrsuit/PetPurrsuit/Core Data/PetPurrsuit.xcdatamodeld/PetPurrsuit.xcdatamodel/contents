@@ -36,7 +36,7 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="organizationId" optional="YES" attributeType="String"/>
         <attribute name="publishedAt" optional="YES" attributeType="String"/>
-        <attribute name="ranking" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="ranking" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="sizeValue" optional="YES" attributeType="String"/>
         <attribute name="species" optional="YES" attributeType="String"/>
         <attribute name="statusValue" optional="YES" attributeType="String"/>
@@ -48,8 +48,8 @@
         <relationship name="breeds" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BreedEntity" inverseName="animal" inverseEntity="BreedEntity"/>
         <relationship name="contactInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ContactInfoEntity" inverseName="animal" inverseEntity="ContactInfoEntity"/>
         <relationship name="environment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AnimalEnvironmentEntity" inverseName="animal" inverseEntity="AnimalEnvironmentEntity"/>
-        <relationship name="photoSizes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhotoSizesEntity" inverseName="animal" inverseEntity="PhotoSizesEntity"/>
-        <relationship name="videos" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VideoEntity" inverseName="animal" inverseEntity="VideoEntity"/>
+        <relationship name="photos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PhotoSizesEntity" inverseName="animal" inverseEntity="PhotoSizesEntity"/>
+        <relationship name="videos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="VideoEntity" inverseName="animal" inverseEntity="VideoEntity"/>
     </entity>
     <entity name="AnimalEnvironmentEntity" representedClassName="AnimalEnvironmentEntity" syncable="YES" codeGenerationType="class">
         <attribute name="cats" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
@@ -88,7 +88,7 @@
         <attribute name="large" optional="YES" attributeType="URI"/>
         <attribute name="medium" optional="YES" attributeType="URI"/>
         <attribute name="small" optional="YES" attributeType="URI"/>
-        <relationship name="animal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AnimalEntity" inverseName="photoSizes" inverseEntity="AnimalEntity"/>
+        <relationship name="animal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AnimalEntity" inverseName="photos" inverseEntity="AnimalEntity"/>
     </entity>
     <entity name="TagEntity" representedClassName="TagEntity" syncable="YES" codeGenerationType="class"/>
     <entity name="UserEntity" representedClassName="UserEntity" syncable="YES" codeGenerationType="class">
