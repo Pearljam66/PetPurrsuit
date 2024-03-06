@@ -8,15 +8,15 @@
 import Foundation
 @testable import PetPurrsuit
 
-enum AnimalsRequestMock: NetworkRequestProtocol {
+enum AnimalsRequestMock: RequestProtocol {
 
     case getAnimals
 
-    var requestType: NetworkRequestType {
+    var requestType: RequestType {
         return .GET
     }
 
-    var endpointPath: String {
+    var path: String {
         do {
             guard let path = Bundle.main.path(forResource: "AnimalMockData", ofType: "json") else {
                 throw NSError(domain: "AnimalsRequestMock",

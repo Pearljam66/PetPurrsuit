@@ -10,16 +10,15 @@ import XCTest
 
 class NetworkRequestManagerTests: XCTestCase {
 
-    private var networkRequestManager: NetworkRequestManagerProtocol?
+    private var networkRequestManager: RequestManagerProtocol?
 
     override func setUp() {
         super.setUp()
 
         guard let userDefaults = UserDefaults(suiteName: #file) else { return }
         userDefaults.removePersistentDomain(forName: #file)
-        networkRequestManager = NetworkRequestManager(
-                                apiManager: PetFinderAPIManagerMock(),
-                                accessTokenManager: AccessTokenManager(userDefaults: userDefaults))
+        networkRequestManager = RequestManager(
+                                apiManager: PetFinderAPIManagerMock())
     }
 
     func testRequestAnimals() async throws {
