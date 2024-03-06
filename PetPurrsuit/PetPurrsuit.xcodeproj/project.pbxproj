@@ -173,6 +173,7 @@
 		26864BD22B97B3460091E862 /* User+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreData.swift"; sourceTree = "<group>"; };
 		26864BD42B97B3F40091E862 /* AnimalVideo+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimalVideo+CoreData.swift"; sourceTree = "<group>"; };
 		26864BD62B97B4810091E862 /* Address+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Address+CoreData.swift"; sourceTree = "<group>"; };
+		268B2F5A2B98F3F2002A3A54 /* PetPurrsuit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PetPurrsuit.entitlements; sourceTree = "<group>"; };
 		26B1DE302B97C368002CB40B /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		26E030CB2B96AD6F007D5F98 /* AnimalBreed+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimalBreed+CoreData.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -346,6 +347,7 @@
 		265D744F2B6C69630067A2A7 /* PetPurrsuit */ = {
 			isa = PBXGroup;
 			children = (
+				268B2F5A2B98F3F2002A3A54 /* PetPurrsuit.entitlements */,
 				265D74502B6C69630067A2A7 /* PetPurrsuitApp.swift */,
 				265741E92B7481710036D467 /* Authentication */,
 				265D747F2B6C73160067A2A7 /* Core Data */,
@@ -814,6 +816,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PetPurrsuit/PetPurrsuit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PetPurrsuit/Preview Content\"";
@@ -846,6 +849,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PetPurrsuit/PetPurrsuit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PetPurrsuit/Preview Content\"";
