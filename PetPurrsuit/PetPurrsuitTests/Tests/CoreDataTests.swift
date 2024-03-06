@@ -49,4 +49,17 @@ final class CoreDataTests: XCTestCase {
         after deletion, was \(results.count)
         """)
     }
+
+    func testFetchRequestManagedObject() throws {
+        let previewContext = PersistenceController.preview.container.viewContext
+        let fetchRequest = AnimalEntity.fetchRequest()
+
+        fetchRequest.fetchLimit = 1
+        fetchRequest.predicate = NSPredicate(format: "name == %@", "Ellie")
+        guard let results = try? previewContext.fetch(fetchRequest), let first = results.first else { return }
+
+        XCTAssert(first.name == "Ellie", """
+        Expecting Ellie got \(String(describing: first.name))
+        """)
+    }
 }
