@@ -8,6 +8,5 @@
 import Foundation
 
 protocol APIManagerProtocol {
-    func perform(_ request: NetworkRequestProtocol, authToken: String) async throws -> Data
-    func requestToken() async throws -> Data
+    func perform(_ request: RequestProtocol, authToken: String) async throws -> Data
 }

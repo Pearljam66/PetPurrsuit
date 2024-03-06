@@ -1,5 +1,5 @@
 //
-//  PetfinderAPIToken.swift
+//  APIToken.swift
 //  PetPurrsuit
 //
 //  Created by Sarah Clark on 2/7/24.
@@ -7,28 +7,29 @@
 
 import Foundation
 
-struct PetFinderAPIToken {
-    let accessToken: String
-    let expiresIn: Int
+struct APIToken {
     let tokenType: String
+    let expiresIn: Int
+    let accessToken: String
     private let requestedAt = Date()
 }
 
-extension PetFinderAPIToken: Codable {
+// MARK: - Codable
+extension APIToken: Codable {
     enum CodingKeys: String, CodingKey {
-        case accessToken
-        case expiresIn
         case tokenType
+        case expiresIn
+        case accessToken
     }
 }
 
-extension PetFinderAPIToken {
+// MARK: - Helper properties
+extension APIToken {
     var expiresAt: Date {
         Calendar.current.date(byAdding: .second, value: expiresIn, to: requestedAt) ?? Date()
     }
 
     var bearerAccessToken: String {
-        let expirationTime = expiresAt.timeIntervalSince1970
-        return "\(tokenType) \(accessToken) \(expirationTime)"
+        "\(tokenType) \(accessToken)"
     }
 }

@@ -18,7 +18,7 @@ struct AnimalsNearByView: View {
     )
     private var sectionedAnimals: SectionedFetchResults<String, AnimalEntity>
     @State var isLoading = true
-    private let networkRequestManager = NetworkRequestManager()
+    private let networkRequestManager = RequestManager()
 
     var body: some View {
         NavigationView {

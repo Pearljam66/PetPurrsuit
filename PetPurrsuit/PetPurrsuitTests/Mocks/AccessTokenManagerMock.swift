@@ -33,7 +33,7 @@ class AccessTokenManagerMock: AccessTokenManagerProtocol {
         return accessToken ?? ""
     }
 
-    func refreshWith(apiToken: PetFinderAPIToken) throws {
+    func refreshWith(apiToken: APIToken) throws {
         guard apiToken.expiresAt > Date() else {
             throw AccessTokenError.tokenExpired
         }

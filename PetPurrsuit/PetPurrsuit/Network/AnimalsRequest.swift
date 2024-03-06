@@ -5,11 +5,11 @@
 //  Created by Sarah Clark on 2/7/24.
 //
 
-enum AnimalsRequest: NetworkRequestProtocol {
-    case getAnimalsWith(page: Int, latitude: Double?, longitude: Double?)
-    case getAnimalsBy(name: String, age: String?, type: String?)
+enum AnimalsRequest: RequestProtocol {
+case getAnimalsWith(page: Int, latitude: Double?, longitude: Double?)
+case getAnimalsBy(name: String, age: String?, type: String?)
 
-    var endpointPath: String {
+    var path: String {
         "/v2/animals"
     }
 
@@ -44,8 +44,7 @@ enum AnimalsRequest: NetworkRequestProtocol {
         }
     }
 
-    var requestType: NetworkRequestType {
+    var requestType: RequestType {
         .GET
     }
-
 }

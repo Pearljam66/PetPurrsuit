@@ -24,7 +24,7 @@ extension AccessTokenManager: AccessTokenManagerProtocol {
         return token
     }
 
-    func refreshWith(apiToken: PetFinderAPIToken) throws {
+    func refreshWith(apiToken: APIToken) throws {
         let expiresAt = apiToken.expiresAt
         let token = apiToken.bearerAccessToken
 
@@ -40,7 +40,7 @@ extension AccessTokenManager: AccessTokenManagerProtocol {
 }
 
 private extension AccessTokenManager {
-    func save(token: PetFinderAPIToken) {
+    func save(token: APIToken) {
         userDefaults.set(token.expiresAt.timeIntervalSince1970, forKey: AppUserDefaultsKeys.expiresAt)
         userDefaults.set(token.bearerAccessToken, forKey: AppUserDefaultsKeys.bearerAccessToken)
     }

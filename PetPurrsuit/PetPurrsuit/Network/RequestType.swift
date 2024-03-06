@@ -5,7 +5,7 @@
 //  Created by Sarah Clark on 2/2/24.
 //
 
-enum NetworkRequestType: String {
+enum RequestType: String {
     case GET
     case POST
 }
