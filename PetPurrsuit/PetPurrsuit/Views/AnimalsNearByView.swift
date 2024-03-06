@@ -8,15 +8,29 @@
 import SwiftUI
 
 struct AnimalsNearByView: View {
-    @State var animals: [AnimalEntity] = []
+    @SectionedFetchRequest<String, AnimalEntity>(
+        sectionIdentifier: \AnimalEntity.animalSpecies,
+        sortDescriptors: [
+            NSSortDescriptor(keyPath: \AnimalEntity.species, ascending: true),
+            NSSortDescriptor(keyPath: \AnimalEntity.timestamp, ascending: true)
+        ],
+        animation: .default
+    )
+    private var sectionedAnimals: SectionedFetchResults<String, AnimalEntity>
     @State var isLoading = true
     private let networkRequestManager = NetworkRequestManager()
 
     var body: some View {
         NavigationView {
             List {
-                ForEach(animals) { animal in
-                    AnimalRowView(animal: animal)
+                ForEach(sectionedAnimals) { animals in
+                    Section(header: Text(animals.id)) {
+                        ForEach(animals) { animal in
+                            NavigationLink(destination: AnimalDetailsView()) {
+                                AnimalRowView(animal: animal)
+                            }
+                        }
+                    }
                 }
             }
             .task {
@@ -54,8 +68,7 @@ struct AnimalsNearByView: View {
 
 struct AnimalsNearYouView_Previews: PreviewProvider {
     static var previews: some View {
-        if let animals = CoreDataHelper.getTestAnimalEntities() {
-            AnimalsNearByView(animals: animals, isLoading: false)
-        }
+        AnimalsNearByView(isLoading: false)
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

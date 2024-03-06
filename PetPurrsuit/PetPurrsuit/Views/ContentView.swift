@@ -9,16 +9,20 @@ import CoreData
 import SwiftUI
 
 struct ContentView: View {
+    let managedObjectContext = PersistenceController.shared.container.viewContext
+
     var body: some View {
         TabView {
             AnimalsNearByView()
                 .tabItem {
                     Label("Nearby", systemImage: "location")
                 }
+                .environment(\.managedObjectContext, managedObjectContext)
             SearchAnimalsView()
                 .tabItem {
                     Label("Search", systemImage: "magnifyingglass")
                 }
+                .environment(\.managedObjectContext, managedObjectContext)
         }
     }
 }

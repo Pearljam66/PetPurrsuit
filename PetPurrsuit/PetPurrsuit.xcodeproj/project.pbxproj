@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		262B4A702B98E08B000ED652 /* AnimalDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B4A6F2B98E08B000ED652 /* AnimalDetailsView.swift */; };
+		262B4A722B98E8CB000ED652 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B4A712B98E8CB000ED652 /* LocationManager.swift */; };
 		263AE4CA2B8781310033CF3C /* Animal+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263AE4C92B8781310033CF3C /* Animal+CoreData.swift */; };
 		263AE4CD2B87B4810033CF3C /* CoreDataPersistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263AE4CC2B87B4810033CF3C /* CoreDataPersistable.swift */; };
 		264681FE2B781E06008FAB39 /* AccessTokenMockHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264681FD2B781E06008FAB39 /* AccessTokenMockHelper.swift */; };
@@ -98,6 +100,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		262B4A6F2B98E08B000ED652 /* AnimalDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailsView.swift; sourceTree = "<group>"; };
+		262B4A712B98E8CB000ED652 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		263AE4C92B8781310033CF3C /* Animal+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animal+CoreData.swift"; sourceTree = "<group>"; };
 		263AE4CC2B87B4810033CF3C /* CoreDataPersistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistable.swift; sourceTree = "<group>"; };
 		264681FD2B781E06008FAB39 /* AccessTokenMockHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenMockHelper.swift; sourceTree = "<group>"; };
@@ -243,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				265741FD2B74AF160036D467 /* AppUserDefaultsKeys.swift */,
+				262B4A712B98E8CB000ED652 /* LocationManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -251,10 +256,10 @@
 			isa = PBXGroup;
 			children = (
 				265741F52B74A3C40036D467 /* AnimalRowView.swift */,
+				262B4A6F2B98E08B000ED652 /* AnimalDetailsView.swift */,
 				265741D12B6CB9200036D467 /* AnimalsNearByView.swift */,
 				265D74522B6C69630067A2A7 /* ContentView.swift */,
 				265741C32B6CA7F80036D467 /* Search */,
-				265741CF2B6CB86C0036D467 /* SearchAnimalsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -262,6 +267,7 @@
 		265741C32B6CA7F80036D467 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				265741CF2B6CB86C0036D467 /* SearchAnimalsView.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -636,9 +642,11 @@
 				26B1DE312B97C368002CB40B /* CoreDataHelper.swift in Sources */,
 				265741DF2B7478EF0036D467 /* APIManager.swift in Sources */,
 				265741FE2B74AF160036D467 /* AppUserDefaultsKeys.swift in Sources */,
+				262B4A722B98E8CB000ED652 /* LocationManager.swift in Sources */,
 				265741E62B747D260036D467 /* DataParserProtocol.swift in Sources */,
 				265741EB2B7481910036D467 /* AuthenticationTokenRequest.swift in Sources */,
 				265741D72B6D5C720036D467 /* NetworkRequestProtocol.swift in Sources */,
+				262B4A702B98E08B000ED652 /* AnimalDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
