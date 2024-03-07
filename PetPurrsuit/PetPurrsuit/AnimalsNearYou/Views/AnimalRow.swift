@@ -1,5 +1,5 @@
 //
-//  AnimalRowView.swift
+//  AnimalRow.swift
 //  PetPurrsuit
 //
 //  Created by Sarah Clark on 2/7/24.
@@ -7,8 +7,16 @@
 
 import SwiftUI
 
-struct AnimalRowView: View {
+struct AnimalRow: View {
     let animal: AnimalEntity
+
+    var animalType: String {
+        animal.type ?? ""
+    }
+
+    var animalBreedAndType: String {
+        "\(animal.breed) \(animalType)"
+    }
 
     var body: some View {
         HStack {
@@ -34,6 +42,14 @@ struct AnimalRowView: View {
                 Text(animal.name ?? "No animal name available")
                     .multilineTextAlignment(.center)
                     .font(.title3)
+                Text(animalBreedAndType)
+                    .font(.callout)
+
+                if let description = animal.animalDescription {
+                    Text(description)
+                        .lineLimit(2)
+                        .font(.footnote)
+                }
             }
             .lineLimit(1)
         }
@@ -43,7 +59,7 @@ struct AnimalRowView: View {
 struct AnimalRowView_Previews: PreviewProvider {
     static var previews: some View {
         if let animal = CoreDataHelper.getTestAnimalEntity() {
-            AnimalRowView(animal: animal)
+            AnimalRow(animal: animal)
         } else {
             Text("No animal data available")
         }

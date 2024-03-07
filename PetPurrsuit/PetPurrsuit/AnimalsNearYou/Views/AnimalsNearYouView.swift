@@ -22,7 +22,7 @@ struct AnimalsNearYouView: View {
             List {
                 ForEach(animals) { animal in
                             NavigationLink(destination: AnimalDetailsView()) {
-                                AnimalRowView(animal: animal)
+                                AnimalRow(animal: animal)
                             }
                         }
                 if !animals.isEmpty && viewModel.hasMoreAnimals {
