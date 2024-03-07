@@ -28,4 +28,3 @@ enum AuthTokenRequest: RequestProtocol {
         .POST
     }
 }
-

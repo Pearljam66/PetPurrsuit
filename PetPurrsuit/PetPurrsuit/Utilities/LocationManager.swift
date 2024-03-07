@@ -36,7 +36,7 @@ extension LocationManager {
     }
 }
 
-extension LocationManager : CLLocationManagerDelegate {
+extension LocationManager: CLLocationManagerDelegate {
 
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         updateAuthorizationStatus()
@@ -46,4 +46,3 @@ extension LocationManager : CLLocationManagerDelegate {
         print("Location retrieving failed due to: \(error.localizedDescription)")
     }
 }
-

@@ -38,4 +38,3 @@ class RequestManager: RequestManagerProtocol {
         return decoded
     }
 }
-
