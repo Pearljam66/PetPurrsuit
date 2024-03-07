@@ -13,7 +13,9 @@ struct ContentView: View {
 
     var body: some View {
         TabView {
-            AnimalsNearYouView(viewModel: AnimalsNearYouViewModel(animalFetcher: FetchAnimalsService(requestManager: RequestManager())))
+            AnimalsNearYouView(viewModel: AnimalsNearYouViewModel(animalFetcher: FetchAnimalsService(requestManager: RequestManager()),
+                                    animalStore: AnimalStoreService(
+                                        context:PersistenceController.shared.container.newBackgroundContext())))
                 .tabItem {
                     Label("Nearby", systemImage: "location")
                 }

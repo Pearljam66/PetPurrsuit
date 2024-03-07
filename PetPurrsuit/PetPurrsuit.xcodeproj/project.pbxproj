@@ -67,6 +67,8 @@
 		265D74912B6C88A00067A2A7 /* AnimalAdoptionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265D74902B6C88A00067A2A7 /* AnimalAdoptionStatus.swift */; };
 		265D74932B6C8A690067A2A7 /* AnimalBehaviorAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265D74922B6C8A690067A2A7 /* AnimalBehaviorAttributes.swift */; };
 		265D74952B6C8C6B0067A2A7 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265D74942B6C8C6B0067A2A7 /* Pagination.swift */; };
+		2664BF192B9A48B90036C15E /* AnimalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2664BF182B9A48B90036C15E /* AnimalStore.swift */; };
+		2664BF1B2B9A4A400036C15E /* AnimalStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2664BF1A2B9A4A400036C15E /* AnimalStoreService.swift */; };
 		26686CC52B97D8CB000911CB /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26686CC42B97D8CB000911CB /* CoreDataTests.swift */; };
 		26864BC52B97981A0091E862 /* AnimalPhotoSizes+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26864BC42B97981A0091E862 /* AnimalPhotoSizes+CoreData.swift */; };
 		26864BC72B979AC90091E862 /* AnimalBehaviorAttributes+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26864BC62B979AC90091E862 /* AnimalBehaviorAttributes+CoreData.swift */; };
@@ -166,6 +168,8 @@
 		265D74902B6C88A00067A2A7 /* AnimalAdoptionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalAdoptionStatus.swift; sourceTree = "<group>"; };
 		265D74922B6C8A690067A2A7 /* AnimalBehaviorAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalBehaviorAttributes.swift; sourceTree = "<group>"; };
 		265D74942B6C8C6B0067A2A7 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		2664BF182B9A48B90036C15E /* AnimalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalStore.swift; sourceTree = "<group>"; };
+		2664BF1A2B9A4A400036C15E /* AnimalStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalStoreService.swift; sourceTree = "<group>"; };
 		26686CC42B97D8CB000911CB /* CoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
 		26864BC42B97981A0091E862 /* AnimalPhotoSizes+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimalPhotoSizes+CoreData.swift"; sourceTree = "<group>"; };
 		26864BC62B979AC90091E862 /* AnimalBehaviorAttributes+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimalBehaviorAttributes+CoreData.swift"; sourceTree = "<group>"; };
@@ -432,11 +436,11 @@
 				265D74842B6C79440067A2A7 /* AnimalBreed.swift */,
 				265D748E2B6C87590067A2A7 /* AnimalCoat.swift */,
 				265D748C2B6C867B0067A2A7 /* AnimalColor.swift */,
-				265741F32B74A17F0036D467 /* AnimalsContainer.swift */,
 				265741B22B6C91BC0036D467 /* AnimalDetails.swift */,
 				265741C82B6CAB8B0036D467 /* AnimalEnvironment.swift */,
 				265D748A2B6C85600067A2A7 /* AnimalGender.swift */,
 				265741BD2B6C96100036D467 /* AnimalPhotoSizes.swift */,
+				265741F32B74A17F0036D467 /* AnimalsContainer.swift */,
 				265D74882B6C81F10067A2A7 /* AnimalSize.swift */,
 				265D74862B6C7FFA0067A2A7 /* AnimalType.swift */,
 				265741C62B6CAABE0036D467 /* AnimalVideo.swift */,
@@ -459,6 +463,7 @@
 			children = (
 				268B2F602B992EEB002A3A54 /* AnimalsFetcher.swift */,
 				268B2F5D2B9921BE002A3A54 /* AnimalsNearYouViewModel.swift */,
+				2664BF182B9A48B90036C15E /* AnimalStore.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -477,6 +482,7 @@
 			children = (
 				2693B4E12B9938C80048E07B /* AnimalsFetcherMock.swift */,
 				2693B4DF2B9935F00048E07B /* FetchAnimalsService.swift */,
+				2664BF1A2B9A4A400036C15E /* AnimalStoreService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -641,10 +647,12 @@
 				26864BD52B97B3F40091E862 /* AnimalVideo+CoreData.swift in Sources */,
 				268B2F612B992EEB002A3A54 /* AnimalsFetcher.swift in Sources */,
 				26864BC92B979BF50091E862 /* AnimalEnvironment+CoreData.swift in Sources */,
+				2664BF1B2B9A4A400036C15E /* AnimalStoreService.swift in Sources */,
 				265741F22B749B210036D467 /* AnimalsRequest.swift in Sources */,
 				265741D22B6CB9200036D467 /* AnimalsNearYouView.swift in Sources */,
 				265741DD2B7478500036D467 /* APIManagerProtocol.swift in Sources */,
 				265D745A2B6C69640067A2A7 /* Persistence.swift in Sources */,
+				2664BF192B9A48B90036C15E /* AnimalStore.swift in Sources */,
 				265741B82B6C94160036D467 /* OrganizationInfo.swift in Sources */,
 				265D74532B6C69630067A2A7 /* ContentView.swift in Sources */,
 				265741BC2B6C94480036D467 /* Address.swift in Sources */,
