@@ -3,7 +3,7 @@
 ## Overview
 PetPurrsuit is an iOS application designed to streamline the process of discovering and adopting animals
 in your local area. This app utilizes Core Data for efficient data management and SwiftUI for a modern and
-intuitive user interface
+intuitive user interface.
 
 ## Features
 * **Discover Animals**: Browse and explore a variety of animals available for adoption or fostering in
