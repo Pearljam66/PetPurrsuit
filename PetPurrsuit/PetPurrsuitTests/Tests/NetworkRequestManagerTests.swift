@@ -22,7 +22,7 @@ class NetworkRequestManagerTests: XCTestCase {
     }
 
     func testRequestAnimals() async throws {
-        guard let container: AnimalContainer = try await
+        guard let container: AnimalsContainer = try await
                 networkRequestManager?.perform(AnimalsRequestMock.getAnimals) else {
             XCTFail("No data returned from the NetworkRequestManager.")
             return
