@@ -24,7 +24,7 @@ struct AnimalRow: View {
                 image
                     .resizable()
             } placeholder: {
-                Image("MyOctocat")
+                Image("NoImage")
                     .resizable()
                     .overlay {
                         if animal.picture != nil {
