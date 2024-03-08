@@ -19,19 +19,14 @@ struct AnimalsNearYouView: View {
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(animals) { animal in
-                            NavigationLink(destination: AnimalDetailsView()) {
-                                AnimalRow(animal: animal)
-                            }
-                        }
+            AnimalListView(animals: animals) {
                 if !animals.isEmpty && viewModel.hasMoreAnimals {
                     ProgressView("Finding more animals...")
                         .padding()
                         .frame(maxWidth: .infinity)
                         .task {
-                            await viewModel.fetchAnimals()
-                    }
+                            await viewModel.fetchMoreAnimals()
+                        }
                 }
             }
             .task {
