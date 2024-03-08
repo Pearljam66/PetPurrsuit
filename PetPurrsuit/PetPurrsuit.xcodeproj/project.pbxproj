@@ -97,6 +97,7 @@
 		26F67DB12B9AA03B0021C263 /* AnimalSearcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DB02B9AA03B0021C263 /* AnimalSearcherService.swift */; };
 		26F67DB32B9B9DF70021C263 /* AnimalSearcherMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DB22B9B9DF70021C263 /* AnimalSearcherMock.swift */; };
 		26F67DB52B9BA1960021C263 /* EmptyResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DB42B9BA1960021C263 /* EmptyResultsView.swift */; };
+		26F67DB72B9BAB150021C263 /* SearchFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DB62B9BAB150021C263 /* SearchFilterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -210,6 +211,7 @@
 		26F67DB02B9AA03B0021C263 /* AnimalSearcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalSearcherService.swift; sourceTree = "<group>"; };
 		26F67DB22B9B9DF70021C263 /* AnimalSearcherMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalSearcherMock.swift; sourceTree = "<group>"; };
 		26F67DB42B9BA1960021C263 /* EmptyResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResultsView.swift; sourceTree = "<group>"; };
+		26F67DB62B9BAB150021C263 /* SearchFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -529,6 +531,7 @@
 			children = (
 				265741CF2B6CB86C0036D467 /* SearchAnimalsView.swift */,
 				26F67DB42B9BA1960021C263 /* EmptyResultsView.swift */,
+				26F67DB62B9BAB150021C263 /* SearchFilterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -750,6 +753,7 @@
 				26F67DA92B9A9BCE0021C263 /* AnimalSearchViewModel.swift in Sources */,
 				265741DD2B7478500036D467 /* APIManagerProtocol.swift in Sources */,
 				265D745A2B6C69640067A2A7 /* Persistence.swift in Sources */,
+				26F67DB72B9BAB150021C263 /* SearchFilterView.swift in Sources */,
 				2664BF192B9A48B90036C15E /* AnimalStore.swift in Sources */,
 				265741B82B6C94160036D467 /* OrganizationInfo.swift in Sources */,
 				265D74532B6C69630067A2A7 /* ContentView.swift in Sources */,
@@ -908,7 +912,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -965,7 +969,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -994,7 +998,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1027,7 +1031,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1050,7 +1054,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P92GSKWU9W;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Sarah.PetPurrsuitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1070,7 +1074,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P92GSKWU9W;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Sarah.PetPurrsuitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1089,7 +1093,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P92GSKWU9W;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Sarah.PetPurrsuitUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1108,7 +1112,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P92GSKWU9W;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Sarah.PetPurrsuitUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
