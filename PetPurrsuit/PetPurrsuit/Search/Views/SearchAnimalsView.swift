@@ -41,5 +41,9 @@ struct SearchAnimalsView: View {
 }
 
 #Preview {
-    SearchAnimalsView()
+    SearchAnimalsView(
+        viewModel: AnimalSearchViewModel(animalSearcher: AnimalSearcherMock(),
+                                         animalStore: AnimalStoreService(context: PersistenceController.shared.container.viewContext))
+    )
+    .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 }
