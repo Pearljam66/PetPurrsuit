@@ -36,6 +36,11 @@ struct SearchAnimalsView: View {
                     viewModel.search()
                 }
                 .navigationTitle("Find your future pet")
+                .overlay {
+                    if filteredAnimals.isEmpty && !viewModel.searchText.isEmpty {
+                        EmptyResultsView(query: viewModel.searchText)
+                    }
+                }
         }
     }
 }
