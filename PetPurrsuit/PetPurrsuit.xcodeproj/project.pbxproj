@@ -98,6 +98,7 @@
 		26F67DB32B9B9DF70021C263 /* AnimalSearcherMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DB22B9B9DF70021C263 /* AnimalSearcherMock.swift */; };
 		26F67DB52B9BA1960021C263 /* EmptyResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DB42B9BA1960021C263 /* EmptyResultsView.swift */; };
 		26F67DB72B9BAB150021C263 /* SearchFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DB62B9BAB150021C263 /* SearchFilterView.swift */; };
+		26F67DB92B9BB8700021C263 /* FilterAnimals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DB82B9BB8700021C263 /* FilterAnimals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -212,6 +213,7 @@
 		26F67DB22B9B9DF70021C263 /* AnimalSearcherMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalSearcherMock.swift; sourceTree = "<group>"; };
 		26F67DB42B9BA1960021C263 /* EmptyResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResultsView.swift; sourceTree = "<group>"; };
 		26F67DB62B9BAB150021C263 /* SearchFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilterView.swift; sourceTree = "<group>"; };
+		26F67DB82B9BB8700021C263 /* FilterAnimals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterAnimals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -557,6 +559,7 @@
 			children = (
 				26F67DAA2B9A9C440021C263 /* AnimalSearcher.swift */,
 				26F67DA82B9A9BCE0021C263 /* AnimalSearchViewModel.swift */,
+				26F67DB82B9BB8700021C263 /* FilterAnimals.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -777,6 +780,7 @@
 				265741C52B6CA9770036D467 /* Animal.swift in Sources */,
 				265741B32B6C91BC0036D467 /* AnimalDetails.swift in Sources */,
 				265741B52B6C920A0036D467 /* AnimalAge.swift in Sources */,
+				26F67DB92B9BB8700021C263 /* FilterAnimals.swift in Sources */,
 				265741F42B74A17F0036D467 /* AnimalsContainer.swift in Sources */,
 				26F67DAB2B9A9C440021C263 /* AnimalSearcher.swift in Sources */,
 				265741FC2B74AC940036D467 /* AccessTokenManager.swift in Sources */,

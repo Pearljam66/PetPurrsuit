@@ -12,7 +12,7 @@ struct EmptyResultsView: View {
 
     var body: some View {
         VStack {
-            Image(systemName: "pawprint.system.fill")
+            Image(systemName: "pawprint.circle.fill")
                 .resizable()
                 .frame(width: 64, height: 64)
                 .padding()
