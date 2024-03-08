@@ -21,7 +21,7 @@ intuitive user interface.
 * Swift 5.9
 
 ## Dependencies
-* To be added.
+* PetfinderAPI - Documentation: https://www.petfinder.com/developers/v2/docs/#using-the-api
 
 ## License
 
