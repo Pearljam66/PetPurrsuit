@@ -549,8 +549,8 @@
 		26F67DA22B9A8A4E0021C263 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				26F67DA82B9A9BCE0021C263 /* AnimalSearchViewModel.swift */,
 				26F67DAA2B9A9C440021C263 /* AnimalSearcher.swift */,
+				26F67DA82B9A9BCE0021C263 /* AnimalSearchViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -558,8 +558,8 @@
 		26F67DA32B9A8A9F0021C263 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				26F67DB02B9AA03B0021C263 /* AnimalSearcherService.swift */,
 				26F67DB22B9B9DF70021C263 /* AnimalSearcherMock.swift */,
+				26F67DB02B9AA03B0021C263 /* AnimalSearcherService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
