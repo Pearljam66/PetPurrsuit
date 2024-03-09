@@ -46,7 +46,7 @@ struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             OnboardingView(onboarding: OnboardingModel(
-                title: "Welcome to PetSave",
+                title: "Welcome to PetPurrsuit",
                 description: "Looking for a Pet? Then you're in the right place",
                 image: .bird)
             )

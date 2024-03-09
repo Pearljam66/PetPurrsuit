@@ -15,7 +15,7 @@ struct PetPurrsuitApp: App {
     var onboardingModels: [OnboardingModel] {
         [
             OnboardingModel(
-                title: "Welcome to\n PetSave",
+                title: "Welcome to\n PetPurrsuit",
                 description: "Looking for a Pet?\n Then you're in the right place",
                 image: .bird
             ),
