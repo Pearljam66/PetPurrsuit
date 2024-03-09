@@ -8,37 +8,48 @@
 import SwiftUI
 
 struct SearchAnimalsView: View {
-    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \AnimalEntity.timestamp, ascending: true)],
-        animation: .default)
-
+    @FetchRequest(
+        sortDescriptors: [
+            NSSortDescriptor(keyPath: \AnimalEntity.timestamp, ascending: true)
+        ],
+        animation: .default
+    )
     private var animals: FetchedResults<AnimalEntity>
 
     @StateObject var viewModel = AnimalSearchViewModel(
         animalSearcher: AnimalSearcherService(requestManager: RequestManager()),
-        animalStore: AnimalStoreService(context: PersistenceController.shared.container.newBackgroundContext()))
-
-    private var filterAnimals: FilterAnimals {
-        FilterAnimals(animals: animals, query: viewModel.searchText, age: viewModel.ageSelection, type: viewModel.typeSelection)
-    }
-
-    @State var filterPickerIsPresented = false
+        animalStore: AnimalStoreService(
+            context: PersistenceController.shared.container.newBackgroundContext()
+        )
+    )
 
     var filteredAnimals: [AnimalEntity] {
         guard viewModel.shouldFilter else { return [] }
         return filterAnimals()
     }
 
+    @State var filterPickerIsPresented = false
+
+    private var filterAnimals: FilterAnimals {
+        FilterAnimals(
+            animals: animals,
+            query: viewModel.searchText,
+            age: viewModel.ageSelection,
+            type: viewModel.typeSelection
+        )
+    }
+
     var body: some View {
         NavigationView {
             AnimalListView(animals: filteredAnimals)
+                .navigationTitle("Find your future pet")
                 .searchable(
                     text: $viewModel.searchText,
                     placement: .navigationBarDrawer(displayMode: .always)
                 )
-                .onChange(of: viewModel.searchText) {
+                .onChange(of: viewModel.searchText) { _ in
                     viewModel.search()
                 }
-                .navigationTitle("Find your future pet")
                 .overlay {
                     if filteredAnimals.isEmpty && !viewModel.searchText.isEmpty {
                         EmptyResultsView(query: viewModel.searchText)
@@ -58,14 +69,31 @@ struct SearchAnimalsView: View {
                         }
                     }
                 }
+                .overlay {
+                    if filteredAnimals.isEmpty && viewModel.searchText.isEmpty {
+                        SuggestionsGrid(suggestions: AnimalSearchType.suggestions) { suggestion in
+                            viewModel.selectTypeSuggestion(suggestion)
+                        }
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                    }
+                }
         }
     }
 }
 
-#Preview {
-    SearchAnimalsView(
-        viewModel: AnimalSearchViewModel(animalSearcher: AnimalSearcherMock(),
-                                         animalStore: AnimalStoreService(context: PersistenceController.shared.container.viewContext))
-    )
-    .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+struct SearchAnimalsView_Previews: PreviewProvider {
+    static var previews: some View {
+        SearchAnimalsView(
+            viewModel: AnimalSearchViewModel(
+                animalSearcher: AnimalSearcherMock(),
+                animalStore: AnimalStoreService(
+                    context: PersistenceController.preview.container.viewContext
+                )
+            )
+        )
+        .environment(
+            \.managedObjectContext,
+             PersistenceController.preview.container.viewContext
+        )
+    }
 }
