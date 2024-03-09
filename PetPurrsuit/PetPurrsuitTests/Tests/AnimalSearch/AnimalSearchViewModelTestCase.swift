@@ -75,4 +75,13 @@ final class AnimalSearchViewModelTestCase: XCTestCase {
         XCTAssertEqual(viewModel.typeSelection, .none)
         XCTAssertFalse(viewModel.shouldFilter)
     }
+
+    func testSelectTypeSuggestion() {
+        viewModel.selectTypeSuggestion(.cat)
+
+        XCTAssertTrue(viewModel.searchText.isEmpty)
+        XCTAssertEqual(viewModel.ageSelection, .none)
+        XCTAssertEqual(viewModel.typeSelection, .cat)
+        XCTAssertTrue(viewModel.shouldFilter)
+    }
 }
