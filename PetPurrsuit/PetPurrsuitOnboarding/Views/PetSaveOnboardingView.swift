@@ -45,14 +45,14 @@ public struct PetSaveOnboardingView: View {
                         .frame(maxWidth: .infinity, maxHeight: 44)
                 }
                 .animation(nil, value: currentPageIndex)
-                .buttonStyle(OnboardingButtonStyle(color: .sarahDark))
+                .buttonStyle(OnboardingButtonStyle(color: .lightBlueColor))
 
                 Button(action: onSkip) {
                     Text(skipButtonTitle)
                         .frame(maxWidth: .infinity, maxHeight: 44)
                 }
                 .animation(nil, value: currentPageIndex)
-                .buttonStyle(OnboardingButtonStyle(color: .sarahBlue))
+                .buttonStyle(OnboardingButtonStyle(color: .lightBlueColor))
                 .padding(.bottom, 20)
             }
             .background(OnboardingBackgroundView())
@@ -72,7 +72,7 @@ public struct PetSaveOnboardingView: View {
     }
 
     private func setupPageControlAppearance() {
-        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(.sarahBlue)
+        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(.lightBlueColor)
     }
 
     private func next() {

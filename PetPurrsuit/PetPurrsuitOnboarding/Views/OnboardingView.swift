@@ -19,13 +19,13 @@ struct OnboardingView: View {
             VStack(alignment: .center) {
                 VStack {
                     Text(onboarding.title)
-                        .foregroundStyle(Color.sarahDark)
+                        .foregroundStyle(Color.darkBlueColor)
                         .font(.largeTitle)
                         .bold()
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 10)
                     Text(onboarding.description)
-                        .foregroundStyle(Color.sarahDark)
+                        .foregroundStyle(Color.darkBlueColor)
                         .multilineTextAlignment(.center)
                         .padding([.top, .bottom], 10)
                         .padding(.horizontal, 10)
@@ -33,7 +33,7 @@ struct OnboardingView: View {
                     onboarding.image
                         .resizable()
                         .frame(width: 140, height: 140, alignment: .center)
-                        .foregroundStyle(Color.sarahDark)
+                        .foregroundStyle(Color.darkBlueColor)
                         .aspectRatio(contentMode: .fit)
                 }
                 .padding()
