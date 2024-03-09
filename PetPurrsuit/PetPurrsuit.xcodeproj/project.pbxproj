@@ -108,6 +108,11 @@
 		26F67DD82B9C8A1A0021C263 /* PetPurrsuitOnboarding.h in Headers */ = {isa = PBXBuildFile; fileRef = 26F67DC82B9C8A1A0021C263 /* PetPurrsuitOnboarding.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		26F67DDB2B9C8A1A0021C263 /* PetPurrsuitOnboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26F67DC62B9C8A1A0021C263 /* PetPurrsuitOnboarding.framework */; };
 		26F67DDC2B9C8A1A0021C263 /* PetPurrsuitOnboarding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 26F67DC62B9C8A1A0021C263 /* PetPurrsuitOnboarding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		26F67DE92B9C98140021C263 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DE82B9C98140021C263 /* Bundle+Extension.swift */; };
+		26F67DEB2B9C98280021C263 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DEA2B9C98280021C263 /* Color+Extension.swift */; };
+		26F67DED2B9C98380021C263 /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DEC2B9C98380021C263 /* Image+Extension.swift */; };
+		26F67DF02B9C9B650021C263 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DEF2B9C9B650021C263 /* OnboardingModel.swift */; };
+		26F67DF22B9C9B7A0021C263 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DF12B9C9B7A0021C263 /* Pet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -266,6 +271,11 @@
 		26F67DC92B9C8A1A0021C263 /* PetPurrsuitOnboarding.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = PetPurrsuitOnboarding.docc; sourceTree = "<group>"; };
 		26F67DCF2B9C8A1A0021C263 /* PetPurrsuitOnboardingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetPurrsuitOnboardingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26F67DD62B9C8A1A0021C263 /* PetPurrsuitOnboardingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetPurrsuitOnboardingTests.swift; sourceTree = "<group>"; };
+		26F67DE82B9C98140021C263 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		26F67DEA2B9C98280021C263 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		26F67DEC2B9C98380021C263 /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
+		26F67DEF2B9C9B650021C263 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
+		26F67DF12B9C9B7A0021C263 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -677,6 +687,8 @@
 			isa = PBXGroup;
 			children = (
 				26F67DC82B9C8A1A0021C263 /* PetPurrsuitOnboarding.h */,
+				26F67DEE2B9C9B480021C263 /* Model */,
+				26F67DE72B9C97B90021C263 /* Extensions */,
 				26F67DC92B9C8A1A0021C263 /* PetPurrsuitOnboarding.docc */,
 			);
 			path = PetPurrsuitOnboarding;
@@ -688,6 +700,25 @@
 				26F67DD62B9C8A1A0021C263 /* PetPurrsuitOnboardingTests.swift */,
 			);
 			path = PetPurrsuitOnboardingTests;
+			sourceTree = "<group>";
+		};
+		26F67DE72B9C97B90021C263 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				26F67DE82B9C98140021C263 /* Bundle+Extension.swift */,
+				26F67DEA2B9C98280021C263 /* Color+Extension.swift */,
+				26F67DEC2B9C98380021C263 /* Image+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		26F67DEE2B9C9B480021C263 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				26F67DEF2B9C9B650021C263 /* OnboardingModel.swift */,
+				26F67DF12B9C9B7A0021C263 /* Pet.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1029,6 +1060,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				26F67DCA2B9C8A1A0021C263 /* PetPurrsuitOnboarding.docc in Sources */,
+				26F67DF02B9C9B650021C263 /* OnboardingModel.swift in Sources */,
+				26F67DEB2B9C98280021C263 /* Color+Extension.swift in Sources */,
+				26F67DF22B9C9B7A0021C263 /* Pet.swift in Sources */,
+				26F67DE92B9C98140021C263 /* Bundle+Extension.swift in Sources */,
+				26F67DED2B9C98380021C263 /* Image+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1193,6 +1229,7 @@
 		265D74772B6C69640067A2A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = PetPurrsuit/PetPurrsuit.entitlements;
@@ -1226,6 +1263,7 @@
 		265D74782B6C69640067A2A7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = PetPurrsuit/PetPurrsuit.entitlements;
