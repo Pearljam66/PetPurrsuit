@@ -17,21 +17,21 @@ struct AnimalTypeSuggestionView: View {
     @ViewBuilder private var gradientOverlay: some View {
         LinearGradient(colors: gradientColors, startPoint: .top, endPoint: .bottom)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .opacity(0.3)
+            .opacity(0.4)
     }
 
     var body: some View {
         suggestion.suggestionImage
             .resizable()
-            .aspectRatio(1, contentMode: .fill)
-            .frame(height: 96)
+            .aspectRatio(2, contentMode: .fit)
+            .frame(height: 100)
             .overlay(gradientOverlay)
             .overlay(alignment: .bottomLeading) {
                 Text(LocalizedStringKey(suggestion.rawValue
                     .capitalized))
                 .padding(12)
                 .foregroundColor(.white)
-                .font(.headline)
+                .font(.title3.bold())
             }
             .cornerRadius(16)
     }

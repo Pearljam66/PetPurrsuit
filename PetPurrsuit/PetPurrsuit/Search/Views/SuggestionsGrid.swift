@@ -20,7 +20,9 @@ struct SuggestionsGrid: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Browse by Type")
-                .font(.title2.bold())
+                .font(.title.bold())
+                .padding(.horizontal, 10)
+                .padding(.vertical, 10)
             LazyVGrid(columns: columns) {
                 ForEach(AnimalSearchType.suggestions, id: \.self) { suggestion in
                     Button {

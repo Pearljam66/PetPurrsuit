@@ -47,7 +47,7 @@ struct SearchAnimalsView: View {
                     text: $viewModel.searchText,
                     placement: .navigationBarDrawer(displayMode: .always)
                 )
-                .onChange(of: viewModel.searchText) { _ in
+                .onChange(of: viewModel.searchText) {
                     viewModel.search()
                 }
                 .overlay {

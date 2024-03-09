@@ -8,8 +8,8 @@
 import SwiftUI
 
 extension Color {
-    static var sarahPurple: Color {
-        Color("spurple", bundle: .module)
+    static var sarahBlue: Color {
+        Color("sblue", bundle: .module)
     }
 
     static var sarahDark: Color {
