@@ -101,6 +101,7 @@
 		26F67DB92B9BB8700021C263 /* FilterAnimals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DB82B9BB8700021C263 /* FilterAnimals.swift */; };
 		26F67DBB2B9BDEAF0021C263 /* SuggestionsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DBA2B9BDEAF0021C263 /* SuggestionsGrid.swift */; };
 		26F67DBD2B9BE0560021C263 /* AnimalTypeSuggestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DBC2B9BE0560021C263 /* AnimalTypeSuggestionView.swift */; };
+		26F67DC02B9BE8820021C263 /* AnimalSearchViewModelTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DBF2B9BE8820021C263 /* AnimalSearchViewModelTestCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -218,6 +219,7 @@
 		26F67DB82B9BB8700021C263 /* FilterAnimals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterAnimals.swift; sourceTree = "<group>"; };
 		26F67DBA2B9BDEAF0021C263 /* SuggestionsGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsGrid.swift; sourceTree = "<group>"; };
 		26F67DBC2B9BE0560021C263 /* AnimalTypeSuggestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTypeSuggestionView.swift; sourceTree = "<group>"; };
+		26F67DBF2B9BE8820021C263 /* AnimalSearchViewModelTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalSearchViewModelTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +281,7 @@
 		2646820A2B78693C008FAB39 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				26F67DBE2B9BE8470021C263 /* AnimalSearch */,
 				2664BF1E2B9A65430036C15E /* AnimalsNearYou */,
 				2664BF212B9A66640036C15E /* Core */,
 			);
@@ -596,6 +599,14 @@
 			path = SharedViews;
 			sourceTree = "<group>";
 		};
+		26F67DBE2B9BE8470021C263 /* AnimalSearch */ = {
+			isa = PBXGroup;
+			children = (
+				26F67DBF2B9BE8820021C263 /* AnimalSearchViewModelTestCase.swift */,
+			);
+			path = AnimalSearch;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -840,6 +851,7 @@
 				26543B322B74CAC700BC7E7A /* PetFinderAPIManagerMock.swift in Sources */,
 				265D74672B6C69640067A2A7 /* PetPurrsuitTests.swift in Sources */,
 				2664BF202B9A656D0036C15E /* AnimalsNearYouViewModelTestCase.swift in Sources */,
+				26F67DC02B9BE8820021C263 /* AnimalSearchViewModelTestCase.swift in Sources */,
 				26686CC52B97D8CB000911CB /* CoreDataTests.swift in Sources */,
 				264682082B785D0D008FAB39 /* AccessTokenManagerMock.swift in Sources */,
 				264682002B782742008FAB39 /* AnimalsRequestMock.swift in Sources */,
