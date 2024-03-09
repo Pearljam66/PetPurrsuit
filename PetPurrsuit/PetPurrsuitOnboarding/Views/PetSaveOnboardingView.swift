@@ -98,7 +98,7 @@ private extension PreviewProvider {
         [
             OnboardingModel(
                 title: "Welcome to\n PetSave",
-                description: "Looking for a Pet?\n Then you're at the right place",
+                description: "Looking for a Pet?\n Then you're in the right place",
                 image: .bird
             ),
             OnboardingModel(
