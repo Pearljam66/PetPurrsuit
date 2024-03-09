@@ -7,6 +7,6 @@
 
 extension Bundle {
     public static var module: Bundle? {
-        Bundle(identifier: "com.sarah.PetPurrsuitOnboarding")
+        Bundle(identifier: "com.Sarah.PetPurrsuitOnboarding")
     }
 }

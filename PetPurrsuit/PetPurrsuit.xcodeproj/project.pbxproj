@@ -89,6 +89,9 @@
 		2693B4E22B9938C80048E07B /* AnimalsFetcherMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2693B4E12B9938C80048E07B /* AnimalsFetcherMock.swift */; };
 		26B1DE312B97C368002CB40B /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B1DE302B97C368002CB40B /* CoreDataHelper.swift */; };
 		26E030CC2B96AD6F007D5F98 /* AnimalBreed+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E030CB2B96AD6F007D5F98 /* AnimalBreed+CoreData.swift */; };
+		26E809082B9CEA5C00D0EC9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26E809062B9CEA2E00D0EC9B /* Assets.xcassets */; };
+		26E8090A2B9CED9700D0EC9B /* PetSaveOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DF82B9CC36E0021C263 /* PetSaveOnboardingView.swift */; };
+		26E8090B2B9CEF7900D0EC9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26E809062B9CEA2E00D0EC9B /* Assets.xcassets */; };
 		26F67DA72B9A91350021C263 /* AnimalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DA62B9A91350021C263 /* AnimalListView.swift */; };
 		26F67DA92B9A9BCE0021C263 /* AnimalSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DA82B9A9BCE0021C263 /* AnimalSearchViewModel.swift */; };
 		26F67DAB2B9A9C440021C263 /* AnimalSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DAA2B9A9C440021C263 /* AnimalSearcher.swift */; };
@@ -113,6 +116,9 @@
 		26F67DED2B9C98380021C263 /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DEC2B9C98380021C263 /* Image+Extension.swift */; };
 		26F67DF02B9C9B650021C263 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DEF2B9C9B650021C263 /* OnboardingModel.swift */; };
 		26F67DF22B9C9B7A0021C263 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DF12B9C9B7A0021C263 /* Pet.swift */; };
+		26F67DF52B9CB9C90021C263 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DF42B9CB9C90021C263 /* OnboardingView.swift */; };
+		26F67DF72B9CC0110021C263 /* OnboardingBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DF62B9CC0110021C263 /* OnboardingBackgroundView.swift */; };
+		26F67DFB2B9CDD180021C263 /* OnboardingButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DFA2B9CDD180021C263 /* OnboardingButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -253,6 +259,7 @@
 		2693B4E12B9938C80048E07B /* AnimalsFetcherMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsFetcherMock.swift; sourceTree = "<group>"; };
 		26B1DE302B97C368002CB40B /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		26E030CB2B96AD6F007D5F98 /* AnimalBreed+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimalBreed+CoreData.swift"; sourceTree = "<group>"; };
+		26E809062B9CEA2E00D0EC9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26F67DA62B9A91350021C263 /* AnimalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListView.swift; sourceTree = "<group>"; };
 		26F67DA82B9A9BCE0021C263 /* AnimalSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalSearchViewModel.swift; sourceTree = "<group>"; };
 		26F67DAA2B9A9C440021C263 /* AnimalSearcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalSearcher.swift; sourceTree = "<group>"; };
@@ -276,6 +283,10 @@
 		26F67DEC2B9C98380021C263 /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
 		26F67DEF2B9C9B650021C263 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		26F67DF12B9C9B7A0021C263 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
+		26F67DF42B9CB9C90021C263 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		26F67DF62B9CC0110021C263 /* OnboardingBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingBackgroundView.swift; sourceTree = "<group>"; };
+		26F67DF82B9CC36E0021C263 /* PetSaveOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetSaveOnboardingView.swift; sourceTree = "<group>"; };
+		26F67DFA2B9CDD180021C263 /* OnboardingButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -600,6 +611,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		26E809072B9CEA2E00D0EC9B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				26E809062B9CEA2E00D0EC9B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		26F67D9E2B9A89DC0021C263 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -687,6 +706,8 @@
 			isa = PBXGroup;
 			children = (
 				26F67DC82B9C8A1A0021C263 /* PetPurrsuitOnboarding.h */,
+				26E809072B9CEA2E00D0EC9B /* Resources */,
+				26F67DF32B9CB9AA0021C263 /* Views */,
 				26F67DEE2B9C9B480021C263 /* Model */,
 				26F67DE72B9C97B90021C263 /* Extensions */,
 				26F67DC92B9C8A1A0021C263 /* PetPurrsuitOnboarding.docc */,
@@ -719,6 +740,17 @@
 				26F67DF12B9C9B7A0021C263 /* Pet.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		26F67DF32B9CB9AA0021C263 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				26F67DF62B9CC0110021C263 /* OnboardingBackgroundView.swift */,
+				26F67DFA2B9CDD180021C263 /* OnboardingButtonStyle.swift */,
+				26F67DF42B9CB9C90021C263 /* OnboardingView.swift */,
+				26F67DF82B9CC36E0021C263 /* PetSaveOnboardingView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -887,6 +919,7 @@
 			files = (
 				265D74582B6C69640067A2A7 /* Preview Assets.xcassets in Resources */,
 				265D74552B6C69640067A2A7 /* Assets.xcassets in Resources */,
+				26E8090B2B9CEF7900D0EC9B /* Assets.xcassets in Resources */,
 				265741CE2B6CB2F70036D467 /* AnimalMockData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -910,6 +943,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26E809082B9CEA5C00D0EC9B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1061,10 +1095,14 @@
 			files = (
 				26F67DCA2B9C8A1A0021C263 /* PetPurrsuitOnboarding.docc in Sources */,
 				26F67DF02B9C9B650021C263 /* OnboardingModel.swift in Sources */,
+				26F67DFB2B9CDD180021C263 /* OnboardingButtonStyle.swift in Sources */,
 				26F67DEB2B9C98280021C263 /* Color+Extension.swift in Sources */,
 				26F67DF22B9C9B7A0021C263 /* Pet.swift in Sources */,
 				26F67DE92B9C98140021C263 /* Bundle+Extension.swift in Sources */,
+				26E8090A2B9CED9700D0EC9B /* PetSaveOnboardingView.swift in Sources */,
 				26F67DED2B9C98380021C263 /* Image+Extension.swift in Sources */,
+				26F67DF52B9CB9C90021C263 /* OnboardingView.swift in Sources */,
+				26F67DF72B9CC0110021C263 /* OnboardingBackgroundView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

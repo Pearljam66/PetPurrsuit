@@ -9,10 +9,10 @@ import SwiftUI
 
 extension Color {
     static var sarahPurple: Color {
-        Color("sarahPurple", bundle: .module)
+        Color("spurple", bundle: .module)
     }
 
     static var sarahDark: Color {
-        Color("sarahDark", bundle: .module)
+        Color("sdark", bundle: .module)
     }
 }
