@@ -12,12 +12,12 @@ struct OnboardingBackgroundView: View {
 
     var body: some View {
         ZStack {
-            ForEach(backgroundPets) { pet in
-                pet.petImage
-                    .resizable()
-                    .frame(width: 200, height: 200, alignment: .center)
-                    .position(pet.position)
-            }
+            LinearGradient(
+                gradient: Gradient(colors: [Color.mediumBlueColor, Color.lightGreenColor]),
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+                .ignoresSafeArea()
         }
     }
 }
