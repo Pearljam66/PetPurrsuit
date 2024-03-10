@@ -27,11 +27,22 @@ struct AnimalListView<Content, Data>: View where Content: View, Data: RandomAcce
             ForEach(animals) { animal in
                 NavigationLink(destination: AnimalDetailsView()) {
                     AnimalRow(animal: animal)
+
                 }
+                .listRowSeparatorTint(.petmaroon)
+                .listRowBackground(
+                LinearGradient(
+                    gradient: Gradient(colors: [Color.petorange, Color.white]),
+                    startPoint: .leading,
+                    endPoint: .trailing
+                )
+                )
+
             }
             footer
         }
         .listStyle(.plain)
+
     }
 }
 
