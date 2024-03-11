@@ -25,7 +25,7 @@ struct AnimalListView<Content, Data>: View where Content: View, Data: RandomAcce
     var body: some View {
         List {
             ForEach(animals) { animal in
-                NavigationLink(destination: AnimalDetailsView()) {
+                NavigationLink(destination: AnimalDetailsView(animal: animal)) {
                     AnimalRow(animal: animal)
 
                 }
