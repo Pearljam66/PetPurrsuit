@@ -96,10 +96,10 @@ struct HeaderTitle: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(animalName ?? "Default Name")
-                .font(.largeTitle)
+                .font(Font.custom("Roboto-Medium", size: 20, relativeTo: .largeTitle))
                 .frame(maxWidth: .infinity, alignment: zoomed ? .center : .leading)
             Text("\(animal.breed) \(animalType ?? "")")
-                .font(.title3)
+                .font(Font.custom("Roboto-Medium", size: 18, relativeTo: .title3))
                 .frame(maxWidth: .infinity, alignment: zoomed ? .center : .leading)
         }
         .offset(

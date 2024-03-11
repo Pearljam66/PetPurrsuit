@@ -51,16 +51,16 @@ struct AnimalRow: View {
                     VStack(alignment: .leading) {
                         Text(animalName)
                             .multilineTextAlignment(.center)
-                            .font(.title3)
+                            .font(Font.custom("Roboto-Medium", size: 18, relativeTo: .title3))
                             .accessibilityLabel(animalName)
                         Text(animalBreedAndType)
-                            .font(.callout)
+                            .font(Font.custom("Roboto-Medium", size: 15, relativeTo: .callout))
                             .accessibilityLabel(animalBreedAndType)
                             .accessibilityHidden(true)
                         if let description = animal.animalDescription {
                             Text(description)
                                 .lineLimit(2)
-                                .font(.footnote)
+                                .font(Font.custom("Roboto-Medium", size: 12, relativeTo: .footnote))
                                 .accessibilityLabel(description)
                                 .accessibilityHidden(true)
                         }

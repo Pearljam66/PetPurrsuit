@@ -41,7 +41,7 @@ struct AnimalDetailsView: View {
                             if let description = animalDescription {
                                 VStack(alignment: .leading) {
                                     Text("Details")
-                                        .font(.headline)
+                                        .font(Font.custom("Roboto-Medium", size: 18, relativeTo: .headline))
                                     Text(description)
                                 }
                             }

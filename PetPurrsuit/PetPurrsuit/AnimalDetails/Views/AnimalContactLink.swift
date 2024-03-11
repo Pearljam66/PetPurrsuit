@@ -19,7 +19,7 @@ struct AnimalContactLink: View {
                 Image(systemName: iconName)
                     .imageScale(.large)
                 Text(title)
-                    .font(.callout)
+                    .font(Font.custom("Roboto-Medium", size: 16, relativeTo: .callout))
                     .accessibility(label: Text("The contact information for this pet: " + title))
             }
             .foregroundColor(color)

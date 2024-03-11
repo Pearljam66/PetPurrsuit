@@ -15,9 +15,9 @@ struct AnimalDetailCard: View {
     var body: some View {
         VStack {
             Text(title)
-                .font(.subheadline)
+                .font(Font.custom("Roboto-Medium", size: 16, relativeTo: .subheadline))
             Text(value)
-                .font(.headline)
+                .font(Font.custom("Roboto-Medium", size: 16, relativeTo: .headline))
         }
         .padding(.vertical)
         .frame(width: 96)

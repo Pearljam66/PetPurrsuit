@@ -25,7 +25,7 @@ struct AnimalContactsView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Contact")
-                .font(.headline)
+                .font(Font.custom("Roboto-Medium", size: 18, relativeTo: .headline))
             HStack {
                 if let phoneLink = animal.phoneLink, let phoneNumber = phoneNumber {
                     AnimalContactLink(

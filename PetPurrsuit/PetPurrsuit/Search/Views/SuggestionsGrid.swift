@@ -20,7 +20,7 @@ struct SuggestionsGrid: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Browse by Type")
-                .font(.title.bold())
+                .font(Font.custom("Roboto-Medium", size: 18, relativeTo: .title))
                 .padding(.horizontal, 10)
                 .padding(.vertical, 10)
             LazyVGrid(columns: columns) {

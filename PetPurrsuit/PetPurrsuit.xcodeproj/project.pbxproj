@@ -103,6 +103,9 @@
 		26F23BC72B9F81E900633009 /* PetRankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F23BC62B9F81E900633009 /* PetRankingView.swift */; };
 		26F23BC92B9F828B00633009 /* PetRankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F23BC82B9F828B00633009 /* PetRankingViewModel.swift */; };
 		26F23BCB2B9F85D100633009 /* PetRankImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F23BCA2B9F85D100633009 /* PetRankImage.swift */; };
+		26F23BCD2B9FA9B500633009 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26F23BCC2B9FA9B500633009 /* Roboto-Medium.ttf */; };
+		26F23BCE2B9FA9B500633009 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26F23BCC2B9FA9B500633009 /* Roboto-Medium.ttf */; };
+		26F23BCF2B9FA9B500633009 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26F23BCC2B9FA9B500633009 /* Roboto-Medium.ttf */; };
 		26F67DA72B9A91350021C263 /* AnimalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DA62B9A91350021C263 /* AnimalListView.swift */; };
 		26F67DA92B9A9BCE0021C263 /* AnimalSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DA82B9A9BCE0021C263 /* AnimalSearchViewModel.swift */; };
 		26F67DAB2B9A9C440021C263 /* AnimalSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DAA2B9A9C440021C263 /* AnimalSearcher.swift */; };
@@ -282,6 +285,8 @@
 		26F23BC62B9F81E900633009 /* PetRankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetRankingView.swift; sourceTree = "<group>"; };
 		26F23BC82B9F828B00633009 /* PetRankingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetRankingViewModel.swift; sourceTree = "<group>"; };
 		26F23BCA2B9F85D100633009 /* PetRankImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetRankImage.swift; sourceTree = "<group>"; };
+		26F23BCC2B9FA9B500633009 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		26F23BD02B9FA9E200633009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		26F67DA62B9A91350021C263 /* AnimalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListView.swift; sourceTree = "<group>"; };
 		26F67DA82B9A9BCE0021C263 /* AnimalSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalSearchViewModel.swift; sourceTree = "<group>"; };
 		26F67DAA2B9A9C440021C263 /* AnimalSearcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalSearcher.swift; sourceTree = "<group>"; };
@@ -481,7 +486,9 @@
 		265D744F2B6C69630067A2A7 /* PetPurrsuit */ = {
 			isa = PBXGroup;
 			children = (
+				26F23BD02B9FA9E200633009 /* Info.plist */,
 				268B2F5A2B98F3F2002A3A54 /* PetPurrsuit.entitlements */,
+				26F23BCC2B9FA9B500633009 /* Roboto-Medium.ttf */,
 				265D74502B6C69630067A2A7 /* PetPurrsuitApp.swift */,
 				265D74522B6C69630067A2A7 /* ContentView.swift */,
 				26F67DA52B9A911E0021C263 /* SharedCode */,
@@ -952,6 +959,7 @@
 			files = (
 				265D74582B6C69640067A2A7 /* Preview Assets.xcassets in Resources */,
 				265D74552B6C69640067A2A7 /* Assets.xcassets in Resources */,
+				26F23BCD2B9FA9B500633009 /* Roboto-Medium.ttf in Resources */,
 				26E8090B2B9CEF7900D0EC9B /* Assets.xcassets in Resources */,
 				26E8090D2B9D135B00D0EC9B /* LaunchScreen.storyboard in Resources */,
 				265741CE2B6CB2F70036D467 /* AnimalMockData.json in Resources */,
@@ -962,6 +970,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26F23BCE2B9FA9B500633009 /* Roboto-Medium.ttf in Resources */,
 				265741FF2B74B4080036D467 /* AnimalMockData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -977,6 +986,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26F23BCF2B9FA9B500633009 /* Roboto-Medium.ttf in Resources */,
 				26E809082B9CEA5C00D0EC9B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1322,6 +1332,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PetPurrsuit/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "PetPurrsuit uses your location to find animals near by.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1357,6 +1368,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PetPurrsuit/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "PetPurrsuit uses your location to find animals near by.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
