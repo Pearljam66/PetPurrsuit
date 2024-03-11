@@ -127,17 +127,26 @@ struct AnimalHeaderView_Previews: PreviewProvider {
         if let animal = CoreDataHelper.getTestAnimalEntity() {
             Group {
                 GeometryReader { geometry in
-                    AnimalHeaderView(animal: animal, zoomed: .constant(true), favorited: .constant(false), geometry: geometry)
+                    AnimalHeaderView(animal: animal,
+                                     zoomed: .constant(true),
+                                     favorited: .constant(false),
+                                     geometry: geometry)
                 }
                 .frame(width: 500, height: 700)
 
                 GeometryReader { geometry in
-                    AnimalHeaderView(animal: animal, zoomed: .constant(false), favorited: .constant(true), geometry: geometry)
+                    AnimalHeaderView(animal: animal,
+                                     zoomed: .constant(false),
+                                     favorited: .constant(true),
+                                     geometry: geometry)
                 }
                 .frame(width: 500, height: 100)
 
                 GeometryReader { geometry in
-                    AnimalHeaderView(animal: animal, zoomed: .constant(false), favorited: .constant(false), geometry: geometry)
+                    AnimalHeaderView(animal: animal,
+                                     zoomed: .constant(false),
+                                     favorited: .constant(false),
+                                     geometry: geometry)
                 }
                 .frame(width: 500, height: 100)
             }
