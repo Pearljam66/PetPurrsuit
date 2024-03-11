@@ -43,4 +43,3 @@ struct AnimalDetailCard_Previews: PreviewProvider {
         }
     }
 }
-
