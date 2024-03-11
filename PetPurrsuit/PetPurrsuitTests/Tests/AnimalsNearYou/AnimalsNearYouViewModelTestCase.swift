@@ -21,19 +21,19 @@ final class AnimalsNearYouViewModelTestCase: XCTestCase {
 
     func testFetchAnimalsLoadingState() async {
         XCTAssertTrue(viewModel.isLoading, "The view model SHOULD be loading, but it isn't.")
-        await viewModel.fetchAnimals()
+        await viewModel.fetchAnimals(location: nil)
         XCTAssertFalse(viewModel.isLoading, "The view model SHOULD NOT be loading, but it is. ")
     }
 
     func testUpdatePageOnFetchMoreAnimals() async {
         XCTAssertEqual(viewModel.page, 1, "The view model's page property should be 1 before fetching but it's \(viewModel.page)")
-        await viewModel.fetchMoreAnimals()
+        await viewModel.fetchMoreAnimals(location: nil)
         XCTAssertEqual(viewModel.page, 2, "The view model's page property should be two after fetching but it's \(viewModel.page)")
     }
 
     func testFetchAnimalsEmptyResponse() async {
         viewModel = AnimalsNearYouViewModel(isLoading: true, animalFetcher: EmptyResponseAnimalsFetcherMock(), animalStore: AnimalStoreService(context: testContext))
-        await viewModel.fetchAnimals()
+        await viewModel.fetchAnimals(location: nil)
         XCTAssertFalse(viewModel.hasMoreAnimals, "hasMoreAnimals should be false with an empty response, but it's true")
         XCTAssertFalse(viewModel.isLoading, "The view model shouldn't be loading after receiving an empty response, but it is.")
     }
