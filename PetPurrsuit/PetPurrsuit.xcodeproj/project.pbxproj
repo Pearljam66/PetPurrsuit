@@ -106,6 +106,9 @@
 		26F23BCD2B9FA9B500633009 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26F23BCC2B9FA9B500633009 /* Roboto-Medium.ttf */; };
 		26F23BCE2B9FA9B500633009 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26F23BCC2B9FA9B500633009 /* Roboto-Medium.ttf */; };
 		26F23BCF2B9FA9B500633009 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26F23BCC2B9FA9B500633009 /* Roboto-Medium.ttf */; };
+		26F23BD22B9FAF2D00633009 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 26F23BD12B9FAF2D00633009 /* Localizable.xcstrings */; };
+		26F23BD32B9FAF2D00633009 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 26F23BD12B9FAF2D00633009 /* Localizable.xcstrings */; };
+		26F23BD42B9FAF2D00633009 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 26F23BD12B9FAF2D00633009 /* Localizable.xcstrings */; };
 		26F67DA72B9A91350021C263 /* AnimalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DA62B9A91350021C263 /* AnimalListView.swift */; };
 		26F67DA92B9A9BCE0021C263 /* AnimalSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DA82B9A9BCE0021C263 /* AnimalSearchViewModel.swift */; };
 		26F67DAB2B9A9C440021C263 /* AnimalSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DAA2B9A9C440021C263 /* AnimalSearcher.swift */; };
@@ -287,6 +290,7 @@
 		26F23BCA2B9F85D100633009 /* PetRankImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetRankImage.swift; sourceTree = "<group>"; };
 		26F23BCC2B9FA9B500633009 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		26F23BD02B9FA9E200633009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		26F23BD12B9FAF2D00633009 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		26F67DA62B9A91350021C263 /* AnimalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListView.swift; sourceTree = "<group>"; };
 		26F67DA82B9A9BCE0021C263 /* AnimalSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalSearchViewModel.swift; sourceTree = "<group>"; };
 		26F67DAA2B9A9C440021C263 /* AnimalSearcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalSearcher.swift; sourceTree = "<group>"; };
@@ -506,6 +510,7 @@
 				265D74542B6C69640067A2A7 /* Assets.xcassets */,
 				265D74562B6C69640067A2A7 /* Preview Content */,
 				26E8090C2B9D135B00D0EC9B /* LaunchScreen.storyboard */,
+				26F23BD12B9FAF2D00633009 /* Localizable.xcstrings */,
 			);
 			path = PetPurrsuit;
 			sourceTree = "<group>";
@@ -937,6 +942,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 265D74442B6C69630067A2A7;
 			productRefGroup = 265D744E2B6C69630067A2A7 /* Products */;
@@ -962,6 +968,7 @@
 				26F23BCD2B9FA9B500633009 /* Roboto-Medium.ttf in Resources */,
 				26E8090B2B9CEF7900D0EC9B /* Assets.xcassets in Resources */,
 				26E8090D2B9D135B00D0EC9B /* LaunchScreen.storyboard in Resources */,
+				26F23BD22B9FAF2D00633009 /* Localizable.xcstrings in Resources */,
 				265741CE2B6CB2F70036D467 /* AnimalMockData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -972,6 +979,7 @@
 			files = (
 				26F23BCE2B9FA9B500633009 /* Roboto-Medium.ttf in Resources */,
 				265741FF2B74B4080036D467 /* AnimalMockData.json in Resources */,
+				26F23BD32B9FAF2D00633009 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -988,6 +996,7 @@
 			files = (
 				26F23BCF2B9FA9B500633009 /* Roboto-Medium.ttf in Resources */,
 				26E809082B9CEA5C00D0EC9B /* Assets.xcassets in Resources */,
+				26F23BD42B9FAF2D00633009 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
