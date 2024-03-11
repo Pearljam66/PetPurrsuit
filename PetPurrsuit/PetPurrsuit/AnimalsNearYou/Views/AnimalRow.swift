@@ -9,66 +9,80 @@ import SwiftUI
 
 struct AnimalRow: View {
     let animal: AnimalEntity
-
-    var animalType: String {
-        animal.type ?? ""
-    }
+    var animalName: String
+    var animalType: String
+    var animalDescription: String
 
     var animalBreedAndType: String {
         "\(animal.breed) \(animalType)"
     }
 
+    init(animal: AnimalEntity) {
+        self.animal = animal
+        animalName = animal.name ?? ""
+        animalType = animal.type ?? ""
+        animalDescription = animal.animalDescription ?? ""
+    }
+
     var body: some View {
-        HStack {
-            AsyncImage(url: animal.picture) { image in
-                image
-                    .resizable()
-            } placeholder: {
-                Image("NoImage")
-                    .resizable()
-                    .overlay {
-                        if animal.picture != nil {
-                            ProgressView()
-                                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                                .background(.gray.opacity(0.4))
+            HStack {
+                AsyncImage(url: animal.picture) { image in
+                    image
+                        .resizable()
+                        .accessibilityLabel("Image of Pet")
+                } placeholder: {
+                    Image("NoImage")
+                        .resizable()
+                        .accessibilityLabel("Placeholder Logo")
+                        .overlay {
+                            if animal.picture != nil {
+                                ProgressView()
+                                    .accessibilityLabel("Image loading indicator")
+                                    .accessibilityHidden(true)
+                                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                    .background(.gray.opacity(0.4))
+                            }
+                        }
+                }
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 112, height: 112)
+                .cornerRadius(8)
+
+                    VStack(alignment: .leading) {
+                        Text(animalName)
+                            .multilineTextAlignment(.center)
+                            .font(.title3)
+                            .accessibilityLabel(animalName)
+                        Text(animalBreedAndType)
+                            .font(.callout)
+                            .accessibilityLabel(animalBreedAndType)
+                            .accessibilityHidden(true)
+                        if let description = animal.animalDescription {
+                            Text(description)
+                                .lineLimit(2)
+                                .font(.footnote)
+                                .accessibilityLabel(description)
+                                .accessibilityHidden(true)
+                        }
+
+                        HStack {
+                            Text(animal.age.rawValue)
+                                .modifier(AnimalAttributesCard(color: animal.age.color))
+                                .accessibilityLabel(animal.age.rawValue)
+                                .accessibilityHidden(true)
+                            Text(animal.gender.rawValue)
+                                .modifier(AnimalAttributesCard(color: .pink))
+                                .accessibilityLabel(animal.gender.rawValue)
                         }
                     }
-            }
-            .aspectRatio(contentMode: .fit)
-            .frame(width: 112, height: 112)
-            .cornerRadius(8)
-
-            VStack(alignment: .leading) {
-                Text(animal.name ?? "No animal name available")
-                    .multilineTextAlignment(.center)
-                    .font(.title3)
-                Text(animalBreedAndType)
-                    .font(.callout)
-
-                if let description = animal.animalDescription {
-                    Text(description)
-                        .lineLimit(2)
-                        .font(.footnote)
-                }
-
-                HStack {
-                    Text(animal.age.rawValue)
-                        .modifier(AnimalAttributesCard(color: animal.age.color))
-                    Text(animal.gender.rawValue)
-                        .modifier(AnimalAttributesCard(color: .pink))
-                }
-            }
-            .lineLimit(1)
         }
     }
 }
 
-struct AnimalRowView_Previews: PreviewProvider {
+struct AnimalRow_Previews: PreviewProvider {
     static var previews: some View {
         if let animal = CoreDataHelper.getTestAnimalEntity() {
             AnimalRow(animal: animal)
-        } else {
-            Text("No animal data available")
         }
     }
 }

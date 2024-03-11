@@ -20,6 +20,7 @@ struct AnimalContactLink: View {
                     .imageScale(.large)
                 Text(title)
                     .font(.callout)
+                    .accessibility(label: Text("The contact information for this pet: " + title))
             }
             .foregroundColor(color)
             .lineLimit(1)
