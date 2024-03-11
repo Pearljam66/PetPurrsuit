@@ -45,7 +45,7 @@ public struct PetSaveOnboardingView: View {
                         .frame(maxWidth: .infinity, maxHeight: 44)
                 }
                 .animation(nil, value: currentPageIndex)
-                .buttonStyle(OnboardingButtonStyle(color: .lightBlueColor))
+                .buttonStyle(OnboardingButtonStyle(color: .darkBlueColor))
 
                 Button(action: onSkip) {
                     Text(skipButtonTitle)
