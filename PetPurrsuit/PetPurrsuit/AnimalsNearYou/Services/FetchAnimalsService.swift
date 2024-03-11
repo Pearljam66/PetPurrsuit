@@ -5,7 +5,9 @@
 //  Created by Sarah Clark on 3/6/24.
 //
 
-struct FetchAnimalsService {
+import Foundation
+
+actor FetchAnimalsService {
     private let requestManager: RequestManagerProtocol
 
     init(requestManager: RequestManagerProtocol) {
@@ -14,15 +16,23 @@ struct FetchAnimalsService {
 }
 
 extension FetchAnimalsService: AnimalsFetcher {
-
-    func fetchAnimals(page: Int) async -> [Animal] {
-        let requestData = AnimalsRequest.getAnimalsWith(page: page, latitude: nil, longitude: nil)
+    func fetchAnimals(
+        page: Int,
+        latitude: Double?,
+        longitude: Double?
+    ) async -> [Animal] {
+        let requestData = AnimalsRequest.getAnimalsWith(
+            page: page,
+            latitude: latitude,
+            longitude: longitude
+        )
         do {
-            let animalsContainer: AnimalsContainer = try await requestManager.perform(requestData)
+            let animalsContainer: AnimalsContainer = try await
+            requestManager.perform(requestData)
             return animalsContainer.animals
         } catch {
             print(error.localizedDescription)
+            return []
         }
-        return []
     }
 }

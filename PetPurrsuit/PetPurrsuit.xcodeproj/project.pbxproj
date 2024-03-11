@@ -109,6 +109,7 @@
 		26F23BD22B9FAF2D00633009 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 26F23BD12B9FAF2D00633009 /* Localizable.xcstrings */; };
 		26F23BD32B9FAF2D00633009 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 26F23BD12B9FAF2D00633009 /* Localizable.xcstrings */; };
 		26F23BD42B9FAF2D00633009 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 26F23BD12B9FAF2D00633009 /* Localizable.xcstrings */; };
+		26F23BD62B9FB43E00633009 /* RequestLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F23BD52B9FB43E00633009 /* RequestLocationView.swift */; };
 		26F67DA72B9A91350021C263 /* AnimalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DA62B9A91350021C263 /* AnimalListView.swift */; };
 		26F67DA92B9A9BCE0021C263 /* AnimalSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DA82B9A9BCE0021C263 /* AnimalSearchViewModel.swift */; };
 		26F67DAB2B9A9C440021C263 /* AnimalSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F67DAA2B9A9C440021C263 /* AnimalSearcher.swift */; };
@@ -291,6 +292,7 @@
 		26F23BCC2B9FA9B500633009 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		26F23BD02B9FA9E200633009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		26F23BD12B9FAF2D00633009 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		26F23BD52B9FB43E00633009 /* RequestLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLocationView.swift; sourceTree = "<group>"; };
 		26F67DA62B9A91350021C263 /* AnimalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListView.swift; sourceTree = "<group>"; };
 		26F67DA82B9A9BCE0021C263 /* AnimalSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalSearchViewModel.swift; sourceTree = "<group>"; };
 		26F67DAA2B9A9C440021C263 /* AnimalSearcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalSearcher.swift; sourceTree = "<group>"; };
@@ -633,6 +635,7 @@
 				2664BF1C2B9A5F1D0036C15E /* AnimalAttributesCard.swift */,
 				265741F52B74A3C40036D467 /* AnimalRow.swift */,
 				265741D12B6CB9200036D467 /* AnimalsNearYouView.swift */,
+				26F23BD52B9FB43E00633009 /* RequestLocationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1103,6 +1106,7 @@
 				265D748B2B6C85600067A2A7 /* AnimalGender.swift in Sources */,
 				2693B4E22B9938C80048E07B /* AnimalsFetcherMock.swift in Sources */,
 				265741BE2B6C96100036D467 /* AnimalPhotoSizes.swift in Sources */,
+				26F23BD62B9FB43E00633009 /* RequestLocationView.swift in Sources */,
 				26864BCB2B979CB70091E862 /* AnimalColor+CoreData.swift in Sources */,
 				26864BC72B979AC90091E862 /* AnimalBehaviorAttributes+CoreData.swift in Sources */,
 				26F23BCB2B9F85D100633009 /* PetRankImage.swift in Sources */,

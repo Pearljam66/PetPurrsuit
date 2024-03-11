@@ -15,42 +15,66 @@ struct AnimalsNearYouView: View {
         animation: .default
     )
     private var animals: FetchedResults<AnimalEntity>
+    @EnvironmentObject var locationManager: LocationManager
     @ObservedObject var viewModel: AnimalsNearYouViewModel
 
     var body: some View {
         NavigationView {
-            AnimalListView(animals: animals) {
-                if !animals.isEmpty && viewModel.hasMoreAnimals {
-                    ProgressView("Finding more animals...")
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .task {
-                            await viewModel.fetchMoreAnimals()
+            if locationManager.locationIsDisabled {
+                RequestLocationView()
+                    .navigationTitle("Animals near you")
+            } else {
+                AnimalListView(animals: animals) {
+                    if !animals.isEmpty && viewModel.hasMoreAnimals {
+                        HStack(alignment: .center) {
+                            Text("Loading more animals...")
                         }
+                        .task {
+                            await viewModel.fetchMoreAnimals(location: locationManager.lastSeenLocation)
+                        }
+                    }
+                }
+                .task {
+                    await viewModel.fetchAnimals(location: locationManager.lastSeenLocation)
+                }
+                .listStyle(.plain)
+                .navigationTitle("Animals near you")
+                .overlay {
+                    if viewModel.isLoading && animals.isEmpty {
+                        ProgressView("Finding Animals near you...")
+                    }
                 }
             }
-            .task {
-                await viewModel.fetchAnimals()
-            }
-            .listStyle(.plain)
-            .navigationTitle("Animals near by")
-            .overlay {
-                if viewModel.isLoading && animals.isEmpty {
-                    ProgressView("Finding animals near you")
-                }
-            }
-        }
-        .navigationViewStyle(StackNavigationViewStyle())
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
 struct AnimalsNearYouView_Previews: PreviewProvider {
     static var previews: some View {
-        AnimalsNearYouView(viewModel: AnimalsNearYouViewModel(
-            animalFetcher: AnimalsFetcherMock(),
-            animalStore: AnimalStoreService(context: CoreDataHelper.previewContext)
+        Group {
+            AnimalsNearYouView(
+                viewModel: AnimalsNearYouViewModel(
+                    animalFetcher: AnimalsFetcherMock(),
+                    animalStore: AnimalStoreService(
+                        context: PersistenceController.preview.container.viewContext
+                    )
+                )
+            )
+
+            AnimalsNearYouView(
+                viewModel: AnimalsNearYouViewModel(
+                    animalFetcher: AnimalsFetcherMock(),
+                    animalStore: AnimalStoreService(
+                        context: PersistenceController.preview.container.viewContext
+                    )
+                )
+            )
+            .preferredColorScheme(.dark)
+        }
+        .environment(
+            \.managedObjectContext,
+             PersistenceController.preview.container.viewContext
         )
-    )
-    .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        .environmentObject(LocationManager())
     }
 }

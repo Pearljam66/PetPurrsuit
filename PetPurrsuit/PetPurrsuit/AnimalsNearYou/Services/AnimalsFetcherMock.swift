@@ -5,9 +5,14 @@
 //  Created by Sarah Clark on 3/6/24.
 //
 
-struct AnimalsFetcherMock: AnimalsFetcher {
+import CoreLocation
 
-    func fetchAnimals(page: Int) async -> [Animal] {
-        Animal.animalMock
+struct AnimalsFetcherMock: AnimalsFetcher {
+    func fetchAnimals(
+        page: Int,
+        latitude: Double?,
+        longitude: Double?
+    ) async -> [Animal] {
+        return Animal.animalMock
     }
 }

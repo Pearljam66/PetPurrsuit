@@ -33,9 +33,6 @@
         }
       }
     },
-    "Animals near by" : {
-
-    },
     "Animals near you" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -112,10 +109,7 @@
     "Find your future furry friend" : {
 
     },
-    "Finding animals near you" : {
-
-    },
-    "Finding more animals..." : {
+    "Finding Animals near you..." : {
 
     },
     "Gender" : {
@@ -133,6 +127,9 @@
 
     },
     "Image of Pet" : {
+
+    },
+    "Loading more animals..." : {
 
     },
     "Location" : {
@@ -225,6 +222,9 @@
 
     },
     "This is a footer" : {
+
+    },
+    "To find pets near you, first, you need to\nshare your current location." : {
 
     },
     "Type" : {
