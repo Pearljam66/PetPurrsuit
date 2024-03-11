@@ -22,7 +22,7 @@ struct RequestLocationView: View {
             """)
             .multilineTextAlignment(.center)
             LocationButton {
-                locationManager.startUpdatingLocation()
+                locationManager.requestWhenInUseAuthorization()
             }
             .symbolVariant(.fill)
             .foregroundStyle(.white)

@@ -22,7 +22,7 @@ struct PetRankingView: View {
             Text("Rank me!")
                 .multilineTextAlignment(.center)
             ForEach(0...4, id: \.self) { index in
-                PetRankImage(index:index, recentIndex: $viewModel.ranking)
+                PetRankImage(index: index, recentIndex: $viewModel.ranking)
             }
         }
     }
