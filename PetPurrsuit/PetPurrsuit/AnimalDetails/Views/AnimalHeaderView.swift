@@ -49,7 +49,7 @@ struct AnimalImage: View {
                 .resizable()
                 .aspectRatio(zoomed ? nil : 1, contentMode: zoomed ? .fit : .fill)
         } placeholder: {
-            Image("rw-logo")
+            Image("NoImage")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .overlay {
