@@ -27,13 +27,17 @@ struct ContentView: View {
             .tabItem {
                 Label("Near you", systemImage: "location")
             }
-            .environment(\.managedObjectContext, managedObjectContext)
+                .environment(\.managedObjectContext, managedObjectContext)
 
             SearchAnimalsView()
                 .tabItem {
                     Label("Search", systemImage: "magnifyingglass")
                 }
                 .environment(\.managedObjectContext, managedObjectContext)
+            FavoriteAnimalsView()
+                .tabItem {
+                    Label("Favorites", systemImage: "star")
+                }
         }
         .environmentObject(locationManager)
     }

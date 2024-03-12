@@ -28,7 +28,7 @@ struct PetRankImage: View {
             .onChange(of: recentIndex) { value in
                 checkOpacity(value: value)
             }
-            .onAppear() {
+            .onAppear {
                 checkOpacity(value: recentIndex)
             }
     }

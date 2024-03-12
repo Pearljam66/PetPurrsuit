@@ -24,7 +24,7 @@ struct AnimalHeaderView: View {
             HStack {
                 AnimalImage(animalPicture: animal.picture, zoomed: $zoomed, geometry: geometry)
                 HeaderTitle(animal: animal, zoomed: $zoomed, geometry: geometry)
-                Image(systemName: favorited ? "heart.fill" : "heart")
+                Image(systemName: favorited ? "star.fill" : "star")
                     .font(.system(size: 50))
                     .foregroundColor( favorited ? Color(.systemBlue) : Color(.systemBlue))
                     .frame(minWidth: 50, maxWidth: 50, minHeight: 50, maxHeight: 50)

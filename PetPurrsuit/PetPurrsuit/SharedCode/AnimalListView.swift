@@ -32,7 +32,7 @@ struct AnimalListView<Content, Data>: View where Content: View, Data: RandomAcce
                 .listRowSeparatorTint(.petmaroon)
                 .listRowBackground(
                 LinearGradient(
-                    gradient: Gradient(colors: [Color.petorange, Color.white]),
+                    gradient: Gradient(colors: [Color.petlightblue, Color.white]),
                     startPoint: .leading,
                     endPoint: .trailing
                 )

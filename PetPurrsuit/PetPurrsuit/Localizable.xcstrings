@@ -89,6 +89,9 @@
     "Done" : {
 
     },
+    "Favorites" : {
+
+    },
     "Female" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -222,6 +225,9 @@
 
     },
     "This is a footer" : {
+
+    },
+    "This is your favorites screen" : {
 
     },
     "To find pets near you, first, you need to\nshare your current location." : {
