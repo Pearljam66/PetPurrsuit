@@ -8,6 +8,12 @@
             "state" : "new",
             "value" : "%1$@ %2$@"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ %2$@"
+          }
         }
       }
     },
@@ -45,13 +51,34 @@
       }
     },
     "Browse by Type" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Navegar por tipo"
+          }
+        }
+      }
     },
     "Clear" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Borrar"
+          }
+        }
+      }
     },
     "Close" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cerrar"
+          }
+        }
+      }
     },
     "Coat" : {
       "extractionState" : "manual",
@@ -87,10 +114,24 @@
       }
     },
     "Done" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hecho"
+          }
+        }
+      }
     },
     "Favorites" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Favoritas"
+          }
+        }
+      }
     },
     "Female" : {
       "extractionState" : "manual",
@@ -104,16 +145,44 @@
       }
     },
     "Filter" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filtrar"
+          }
+        }
+      }
     },
     "Filters" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filtros"
+          }
+        }
+      }
     },
     "Find your future furry friend" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encuentra a tu amigo peludo"
+          }
+        }
+      }
     },
     "Finding Animals near you..." : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encontrar animales cerca de ti..."
+          }
+        }
+      }
     },
     "Gender" : {
       "extractionState" : "manual",
@@ -127,13 +196,34 @@
       }
     },
     "Image loading indicator" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indicador de carga de imagen"
+          }
+        }
+      }
     },
     "Image of Pet" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Imagen de mascota"
+          }
+        }
+      }
     },
     "Loading more animals..." : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cargando más animales..."
+          }
+        }
+      }
     },
     "Location" : {
       "extractionState" : "manual",
@@ -169,13 +259,34 @@
       }
     },
     "Nearby" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cercana"
+          }
+        }
+      }
     },
     "No items to show." : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No hay artículos para mostrar."
+          }
+        }
+      }
     },
     "Placeholder Logo" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Logotipo de marcador de posición"
+          }
+        }
+      }
     },
     "Rank me!" : {
       "extractionState" : "manual",
@@ -222,19 +333,54 @@
       }
     },
     "Sorry, we couldn't find animals for \"%@\"" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lo sentimos, no pudimos encontrar animales para \"%@\""
+          }
+        }
+      }
     },
     "This is a footer" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este es un pie de página"
+          }
+        }
+      }
     },
     "This is your favorites screen" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esta es tu pantalla de favoritos"
+          }
+        }
+      }
     },
     "To find pets near you, first, you need to\nshare your current location." : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para encontrar mascotas cerca de usted, primero debe\ncomparte tu ubicación actual."
+          }
+        }
+      }
     },
     "Type" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tipp"
+          }
+        }
+      }
     },
     "Unknown" : {
       "extractionState" : "manual",
@@ -248,7 +394,14 @@
       }
     },
     "You can mix both, age and type, to make a more accurate search." : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Puedes combinar ambos, edad y tipo, para realizar una búsqueda más precisa."
+          }
+        }
+      }
     },
     "Young" : {
       "extractionState" : "manual",
