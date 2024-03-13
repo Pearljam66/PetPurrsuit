@@ -14,10 +14,10 @@ struct EmptyResultsView: View {
         VStack {
             Image(systemName: "pawprint.circle.fill")
                 .resizable()
-                .frame(width: 64, height: 64)
+                .frame(width: 100, height: 100)
                 .padding()
-                .foregroundColor(.yellow)
-            Text("Sorry, we couldn't find animals for \"\(query)\"")
+                .foregroundColor(.petorange)
+            Text("Sorry, we couldn't find any results for \"\(query)\".")
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
         }
