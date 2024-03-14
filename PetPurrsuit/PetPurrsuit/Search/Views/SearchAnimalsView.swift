@@ -60,8 +60,11 @@ struct SearchAnimalsView: View {
                         Button {
                             filterPickerIsPresented.toggle()
                         } label: {
-                            Label("Filter", systemImage: "slider.horizontal.3")
+                            Image(systemName: "slider.horizontal.3")
+                                .font(.title)
+                                .accessibilityLabel("Filter")
                         }
+                        .foregroundColor(.petlightgreen)
                         .sheet(isPresented: $filterPickerIsPresented) {
                             NavigationView {
                                 SearchFilterView(viewModel: viewModel)
