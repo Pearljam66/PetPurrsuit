@@ -64,7 +64,7 @@ struct SearchAnimalsView: View {
                                 .font(.title)
                                 .accessibilityLabel("Filter")
                         }
-                        .foregroundColor(.petlightgreen)
+                        .foregroundColor(.petorange)
                         .sheet(isPresented: $filterPickerIsPresented) {
                             NavigationView {
                                 SearchFilterView(viewModel: viewModel)
