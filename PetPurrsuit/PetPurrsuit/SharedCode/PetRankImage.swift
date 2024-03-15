@@ -19,6 +19,7 @@ struct PetRankImage: View {
             .resizable()
             .aspectRatio(contentMode: .fit)
             .opacity(opacity)
+            .foregroundStyle(.petmaroon)
             .frame(width: 50, height: 50)
             .onTapGesture {
                 opacity = tapped ? 0.4 : 1.0

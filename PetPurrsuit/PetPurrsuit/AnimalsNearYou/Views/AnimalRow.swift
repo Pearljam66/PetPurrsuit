@@ -67,11 +67,11 @@ struct AnimalRow: View {
 
                         HStack {
                             Text(animal.age.rawValue)
-                                .modifier(AnimalAttributesCard(color: animal.age.color))
+                                .modifier(AnimalAttributesCard(color: .petmediumblue))
                                 .accessibilityLabel(animal.age.rawValue)
                                 .accessibilityHidden(true)
                             Text(animal.gender.rawValue)
-                                .modifier(AnimalAttributesCard(color: .pink))
+                                .modifier(AnimalAttributesCard(color: .petmaroon))
                                 .accessibilityLabel(animal.gender.rawValue)
                         }
                     }

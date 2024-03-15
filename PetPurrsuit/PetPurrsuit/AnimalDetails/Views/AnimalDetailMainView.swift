@@ -1,5 +1,5 @@
 //
-//  AnimalDetailsView.swift
+//  AnimalDetailMainView.swift
 //  PetPurrsuit
 //
 //  Created by Sarah Clark on 3/6/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AnimalDetailsView: View {
+struct AnimalDetailMainView: View {
     @State var zoomed = false
     @State var favorited = false
 
@@ -57,6 +57,12 @@ struct AnimalDetailsView: View {
                     .animation(.spring(), value: zoomed)
                 }
             }
+            .background(
+                LinearGradient(gradient: Gradient(colors: [.petlightgreen, .white]),
+                               startPoint: .topLeading,
+                               endPoint: .bottomTrailing)
+
+            )
         }
         .navigationTitle(animalName ?? "")
         .navigationBarTitleDisplayMode(.inline)
@@ -67,14 +73,14 @@ struct AnimalsView_Previews: PreviewProvider {
     static var previews: some View {
         if let animal = CoreDataHelper.getTestAnimalEntity() {
             NavigationView {
-                AnimalDetailsView(animal: animal)
+                AnimalDetailMainView(animal: animal)
                     .previewLayout(.sizeThatFits)
             }
             .previewLayout(.sizeThatFits)
             .previewDisplayName("iPhone SE (2nd generation)")
 
             NavigationView {
-                AnimalDetailsView(animal: animal)
+                AnimalDetailMainView(animal: animal)
             }
             .previewDevice("iPhone 12 Pro")
             .previewDisplayName("iPhone 12 Pro")

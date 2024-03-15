@@ -24,15 +24,16 @@ struct AnimalContactsView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Contact")
-                .font(Font.custom("Roboto-Medium", size: 18, relativeTo: .headline))
+            Text("Contact:")
+                .font(.headline)
+                .fontWeight(.bold)
             HStack {
                 if let phoneLink = animal.phoneLink, let phoneNumber = phoneNumber {
                     AnimalContactLink(
                         title: phoneNumber,
                         iconName: "phone.fill",
                         url: phoneLink,
-                        color: .green
+                        color: .petmediumblue
                     )
                 }
                 if let emailLink = animal.emailLink, let emailAddress = emailAddress {
@@ -40,7 +41,7 @@ struct AnimalContactsView: View {
                         title: emailAddress,
                         iconName: "envelope.fill",
                         url: emailLink,
-                        color: .blue
+                        color: .petmaroon
                     )
                 }
             }

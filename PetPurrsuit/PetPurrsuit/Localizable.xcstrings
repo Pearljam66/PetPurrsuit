@@ -333,6 +333,7 @@
       }
     },
     "Sorry, we couldn't find animals for \"%@\"" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -341,6 +342,9 @@
           }
         }
       }
+    },
+    "Sorry, we couldn't find any results for \"%@\"." : {
+
     },
     "This is a footer" : {
       "localizations" : {

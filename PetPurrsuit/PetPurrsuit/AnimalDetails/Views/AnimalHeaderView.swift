@@ -26,7 +26,7 @@ struct AnimalHeaderView: View {
                 HeaderTitle(animal: animal, zoomed: $zoomed, geometry: geometry)
                 Image(systemName: favorited ? "star.fill" : "star")
                     .font(.system(size: 50))
-                    .foregroundColor( favorited ? Color(.systemBlue) : Color(.systemBlue))
+                    .foregroundColor( favorited ? Color(.petmaroon) : Color(.petmaroon))
                     .frame(minWidth: 50, maxWidth: 50, minHeight: 50, maxHeight: 50)
                     .onTapGesture {
                         $favorited.wrappedValue.toggle()
@@ -35,45 +35,6 @@ struct AnimalHeaderView: View {
 
             }
         }
-    }
-}
-
-struct AnimalImage: View {
-    let animalPicture: URL?
-    @Binding var zoomed: Bool
-    let geometry: GeometryProxy
-
-    var body: some View {
-        AsyncImage(url: animalPicture) { image in
-            image
-                .resizable()
-                .aspectRatio(zoomed ? nil : 1, contentMode: zoomed ? .fit : .fill)
-        } placeholder: {
-            Image("NoImage")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .overlay {
-                    if animalPicture != nil {
-                        ProgressView()
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                            .background(.gray.opacity(0.4))
-                    }
-                }
-        }
-        .clipShape(
-            RoundedRectangle(cornerRadius: zoomed ? 0 : 300)
-        )
-        .frame(
-            width: zoomed ? geometry.frame(in: .local).width : 100,
-            height: zoomed ? geometry.frame(in: .global).midX : 100
-        )
-        .offset(
-            x: zoomed ? 0 : 0,
-            y: zoomed ? geometry.frame(in: .local).midY / 3 : 0
-        )
-        .scaleEffect((zoomed ? 5 : 3) / 3)
-        .shadow(radius: zoomed ? 10 : 1)
-        .animation(.spring(), value: zoomed)
     }
 }
 
@@ -96,10 +57,10 @@ struct HeaderTitle: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(animalName ?? "Default Name")
-                .font(Font.custom("Roboto-Medium", size: 20, relativeTo: .largeTitle))
+                .font(.largeTitle)
                 .frame(maxWidth: .infinity, alignment: zoomed ? .center : .leading)
             Text("\(animal.breed) \(animalType ?? "")")
-                .font(Font.custom("Roboto-Medium", size: 18, relativeTo: .title3))
+                .font(.title3)
                 .frame(maxWidth: .infinity, alignment: zoomed ? .center : .leading)
         }
         .offset(

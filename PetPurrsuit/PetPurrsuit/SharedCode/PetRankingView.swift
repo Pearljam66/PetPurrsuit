@@ -21,6 +21,8 @@ struct PetRankingView: View {
         HStack {
             Text("Rank me!")
                 .multilineTextAlignment(.center)
+                .font(.title)
+                .fontWeight(.bold)
             ForEach(0...4, id: \.self) { index in
                 PetRankImage(index: index, recentIndex: $viewModel.ranking)
             }

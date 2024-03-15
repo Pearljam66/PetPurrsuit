@@ -16,25 +16,25 @@ struct AnimalDetailRow: View {
                 AnimalDetailCard(
                     title: "Age",
                     value: animal.age.rawValue,
-                    color: animal.age.color
+                    color: .petmediumblue
                 )
 
                 AnimalDetailCard(
                     title: "Gender",
                     value: animal.gender.rawValue,
-                    color: .pink
+                    color: .petmaroon
                 )
 
                 AnimalDetailCard(
                     title: "Size",
                     value: animal.size.rawValue,
-                    color: .mint
+                    color: .petdarkblue
                 )
 
                 AnimalDetailCard(
                     title: "Coat",
                     value: animal.coat.rawValue,
-                    color: .brown
+                    color: .petbrown
                 )
             }
             .padding(.horizontal)

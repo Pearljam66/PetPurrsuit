@@ -15,13 +15,14 @@ struct AnimalDetailCard: View {
     var body: some View {
         VStack {
             Text(title)
-                .font(Font.custom("Roboto-Medium", size: 16, relativeTo: .subheadline))
+                .font(.subheadline)
             Text(value)
-                .font(Font.custom("Roboto-Medium", size: 16, relativeTo: .headline))
+                .font(.headline)
+                .fontWeight(.bold)
         }
         .padding(.vertical)
-        .frame(width: 96)
-        .background(color.opacity(0.2))
+        .frame(width: 80)
+        .background(color.opacity(0.3))
         .foregroundColor(color)
         .cornerRadius(8)
     }
@@ -33,12 +34,12 @@ struct AnimalDetailCard_Previews: PreviewProvider {
             AnimalDetailCard(
                 title: "Age",
                 value: "Adult",
-                color: .green
+                color: .petmediumblue
             )
             AnimalDetailCard(
                 title: "Age",
                 value: "Baby",
-                color: .blue
+                color: .petmediumblue
             )
         }
     }
