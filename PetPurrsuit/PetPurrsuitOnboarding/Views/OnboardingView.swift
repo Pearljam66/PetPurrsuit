@@ -20,7 +20,7 @@ struct OnboardingView: View {
                 VStack {
                     Text(onboarding.title)
                         .foregroundStyle(Color.darkBlueColor)
-                        .font(Font.custom("Roboto-Medium", size: 30, relativeTo: .largeTitle))
+                        .font(.largeTitle)
                         .bold()
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 10)

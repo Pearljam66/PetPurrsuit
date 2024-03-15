@@ -16,6 +16,6 @@ struct AnimalAttributesCard: ViewModifier {
             .background(color.opacity(0.2))
             .cornerRadius(8)
             .foregroundColor(color)
-            .font(Font.custom("Roboto-Medium", size: 16, relativeTo: .subheadline))
+            .font(.subheadline)
     }
 }

@@ -16,9 +16,9 @@ struct AnimalLocationView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             Text("Location")
-                .font(Font.custom("Roboto-Medium", size: 16, relativeTo: .headline))
+                .font(.headline)
             Text(animal.address)
-                .font(Font.custom("Roboto-Medium", size: 16, relativeTo: .subheadline))
+                .font(.subheadline)
                 .textSelection(.enabled)
 
             Button(action: openAddressInMaps) {

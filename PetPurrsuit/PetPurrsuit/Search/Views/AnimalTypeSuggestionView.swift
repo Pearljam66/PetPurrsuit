@@ -31,7 +31,7 @@ struct AnimalTypeSuggestionView: View {
                     .capitalized))
                 .padding(12)
                 .foregroundColor(.white)
-                .font(Font.custom("Roboto-Medium", size: 18, relativeTo: .title3))
+                .font(.title3)
             }
             .cornerRadius(16)
     }
