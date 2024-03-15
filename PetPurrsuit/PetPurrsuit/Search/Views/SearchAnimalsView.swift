@@ -42,7 +42,7 @@ struct SearchAnimalsView: View {
     var body: some View {
         NavigationView {
             AnimalListView(animals: filteredAnimals)
-                .navigationTitle("Find your future furry friend")
+                .navigationTitle("Find your future friend")
                 .searchable(
                     text: $viewModel.searchText,
                     placement: .navigationBarDrawer(displayMode: .always)
