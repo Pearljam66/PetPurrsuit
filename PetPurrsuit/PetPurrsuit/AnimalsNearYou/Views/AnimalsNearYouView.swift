@@ -22,7 +22,7 @@ struct AnimalsNearYouView: View {
         NavigationView {
             if locationManager.locationIsDisabled {
                 RequestLocationView()
-                    .navigationTitle("Animals near you")
+                    .navigationTitle("Nearby Adoption Pals")
             } else {
                 AnimalListView(animals: animals) {
                     if !animals.isEmpty && viewModel.hasMoreAnimals {
@@ -38,10 +38,10 @@ struct AnimalsNearYouView: View {
                     await viewModel.fetchAnimals(location: locationManager.lastSeenLocation)
                 }
                 .listStyle(.plain)
-                .navigationTitle("Animals near you")
+                .navigationTitle("Nearby Adoption Pals")
                 .overlay {
                     if viewModel.isLoading && animals.isEmpty {
-                        ProgressView("Finding Animals near you...")
+                        ProgressView("Finding nearby adoption pals...")
                     }
                 }
             }

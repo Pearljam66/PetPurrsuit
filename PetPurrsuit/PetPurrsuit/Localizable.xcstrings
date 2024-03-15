@@ -178,6 +178,7 @@
       }
     },
     "Finding Animals near you..." : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -186,6 +187,9 @@
           }
         }
       }
+    },
+    "Finding nearby adoption pals..." : {
+
     },
     "Gender" : {
       "extractionState" : "manual",
@@ -270,6 +274,9 @@
           }
         }
       }
+    },
+    "Nearby Adoption Pals" : {
+
     },
     "No items to show." : {
       "localizations" : {

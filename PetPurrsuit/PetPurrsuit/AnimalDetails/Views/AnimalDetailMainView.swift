@@ -58,7 +58,7 @@ struct AnimalDetailMainView: View {
                 }
             }
             .background(
-                LinearGradient(gradient: Gradient(colors: [.petlightgreen, .white]),
+                LinearGradient(gradient: Gradient(colors: [.petlightblue, .petlightgreen, .white]),
                                startPoint: .topLeading,
                                endPoint: .bottomTrailing)
 

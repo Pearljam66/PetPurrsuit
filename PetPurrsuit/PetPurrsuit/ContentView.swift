@@ -39,7 +39,7 @@ struct ContentView: View {
                     Label("Favorites", systemImage: "heart")
                 }
         }
-        .tint(.petmaroon)
+        .tint(.petorange)
         .environmentObject(locationManager)
     }
 }
