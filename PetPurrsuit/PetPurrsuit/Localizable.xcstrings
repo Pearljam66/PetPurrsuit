@@ -102,6 +102,9 @@
         }
       }
     },
+    "Contact:" : {
+
+    },
     "Details" : {
       "extractionState" : "manual",
       "localizations" : {

@@ -36,9 +36,10 @@ struct ContentView: View {
                 .environment(\.managedObjectContext, managedObjectContext)
             FavoriteAnimalsView()
                 .tabItem {
-                    Label("Favorites", systemImage: "star")
+                    Label("Favorites", systemImage: "heart")
                 }
         }
+        .tint(.petlightmaroon)
         .environmentObject(locationManager)
     }
 }
