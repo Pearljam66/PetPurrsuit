@@ -1,5 +1,5 @@
 //
-//  EmptyResultsView.swift
+//  EmptySearchResultsView.swift
 //  PetPurrsuit
 //
 //  Created by Sarah Clark on 3/8/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EmptyResultsView: View {
+struct EmptySearchResultsView: View {
     let query: String
 
     var body: some View {
@@ -16,7 +16,7 @@ struct EmptyResultsView: View {
                 .resizable()
                 .frame(width: 100, height: 100)
                 .padding()
-                .foregroundColor(.petorange)
+                .foregroundColor(.petlightblue)
             Text("Sorry, we couldn't find any results for \"\(query)\".")
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
@@ -25,5 +25,5 @@ struct EmptyResultsView: View {
 }
 
 #Preview {
-    EmptyResultsView(query: "Kiki")
+    EmptySearchResultsView(query: "Kiki")
 }

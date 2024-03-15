@@ -52,7 +52,7 @@ struct SearchAnimalsView: View {
                 }
                 .overlay {
                     if filteredAnimals.isEmpty && !viewModel.searchText.isEmpty {
-                        EmptyResultsView(query: viewModel.searchText)
+                        EmptySearchResultsView(query: viewModel.searchText)
                     }
                 }
                 .toolbar {
