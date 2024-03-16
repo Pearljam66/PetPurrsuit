@@ -1,5 +1,5 @@
 //
-//  SuggestionsGrid.swift
+//  AnimalSuggestionsGrid.swift
 //  PetPurrsuit
 //
 //  Created by Sarah Clark on 3/8/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SuggestionsGrid: View {
+struct AnimalSuggestionsGrid: View {
     @Environment(\.isSearching) var isSearching: Bool
     let suggestions: [AnimalSearchType]
     var action: (AnimalSearchType) -> Void
@@ -28,7 +28,7 @@ struct SuggestionsGrid: View {
                     Button {
                         action(suggestion)
                     } label: {
-                        AnimalTypeSuggestionView(suggestion: suggestion)
+                        AnimalTypeSuggestionIndividualView(suggestion: suggestion)
                     }
                 }
             }
@@ -37,5 +37,5 @@ struct SuggestionsGrid: View {
 }
 
 #Preview {
-    SuggestionsGrid(suggestions: AnimalSearchType.suggestions) { _ in }
+    AnimalSuggestionsGrid(suggestions: AnimalSearchType.suggestions) { _ in }
 }

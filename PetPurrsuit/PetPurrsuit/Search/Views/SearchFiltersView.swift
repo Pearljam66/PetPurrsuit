@@ -1,5 +1,5 @@
 //
-//  SearchFilterView.swift
+//  SearchFiltersView.swift
 //  PetPurrsuit
 //
 //  Created by Sarah Clark on 3/8/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SearchFilterView: View {
+struct SearchFiltersView: View {
     @Environment(\.dismiss) private var dismiss
     @ObservedObject var viewModel: AnimalSearchViewModel
 
@@ -56,7 +56,7 @@ struct SearchFilterView_Previews: PreviewProvider {
     static var previews: some View {
         let context = PersistenceController.preview.container.viewContext
         NavigationView {
-            SearchFilterView(
+            SearchFiltersView(
                 viewModel: AnimalSearchViewModel(
                     animalSearcher: AnimalSearcherMock(),
                     animalStore: AnimalStoreService(context: context)

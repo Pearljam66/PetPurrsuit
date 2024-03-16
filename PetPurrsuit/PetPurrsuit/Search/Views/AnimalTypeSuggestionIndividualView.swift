@@ -1,5 +1,5 @@
 //
-//  AnimalTypeSuggestionView.swift
+//  AnimalTypeSuggestionIndividualView.swift
 //  PetPurrsuit
 //
 //  Created by Sarah Clark on 3/8/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AnimalTypeSuggestionView: View {
+struct AnimalTypeSuggestionIndividualView: View {
     let suggestion: AnimalSearchType
 
     private var gradientColors: [Color] {
@@ -39,9 +39,9 @@ struct AnimalTypeSuggestionView: View {
 
 struct AnimalTypeSuggestionView_Previews: PreviewProvider {
     static var previews: some View {
-        AnimalTypeSuggestionView(suggestion: AnimalSearchType.cat)
+        AnimalTypeSuggestionIndividualView(suggestion: AnimalSearchType.cat)
             .previewLayout(.sizeThatFits)
-        AnimalTypeSuggestionView(suggestion: AnimalSearchType.cat)
+        AnimalTypeSuggestionIndividualView(suggestion: AnimalSearchType.cat)
             .previewLayout(.sizeThatFits)
             .environment(\.locale, .init(identifier: "es"))
             .previewDisplayName("Spanish Locale")

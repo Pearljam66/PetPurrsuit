@@ -29,7 +29,7 @@ struct ContentView: View {
             }
                 .environment(\.managedObjectContext, managedObjectContext)
 
-            SearchAnimalsView()
+            SearchAnimalsMainView()
                 .tabItem {
                     Label("Search", systemImage: "magnifyingglass")
                 }

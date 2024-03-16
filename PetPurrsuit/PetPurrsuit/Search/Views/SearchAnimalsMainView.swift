@@ -1,5 +1,5 @@
 //
-//  SearchAnimalsView.swift
+//  SearchAnimalsMainView.swift
 //  PetPurrsuit
 //
 //  Created by Sarah Clark on 2/1/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SearchAnimalsView: View {
+struct SearchAnimalsMainView: View {
     @FetchRequest(
         sortDescriptors: [
             NSSortDescriptor(keyPath: \AnimalEntity.timestamp, ascending: true)
@@ -67,14 +67,14 @@ struct SearchAnimalsView: View {
                         .foregroundColor(.petorange)
                         .sheet(isPresented: $filterPickerIsPresented) {
                             NavigationView {
-                                SearchFilterView(viewModel: viewModel)
+                                SearchFiltersView(viewModel: viewModel)
                             }
                         }
                     }
                 }
                 .overlay {
                     if filteredAnimals.isEmpty && viewModel.searchText.isEmpty {
-                        SuggestionsGrid(suggestions: AnimalSearchType.suggestions) { suggestion in
+                        AnimalSuggestionsGrid(suggestions: AnimalSearchType.suggestions) { suggestion in
                             viewModel.selectTypeSuggestion(suggestion)
                         }
                         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
@@ -86,7 +86,7 @@ struct SearchAnimalsView: View {
 
 struct SearchAnimalsView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchAnimalsView(
+        SearchAnimalsMainView(
             viewModel: AnimalSearchViewModel(
                 animalSearcher: AnimalSearcherMock(),
                 animalStore: AnimalStoreService(
