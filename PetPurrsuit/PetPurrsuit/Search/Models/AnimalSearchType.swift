@@ -11,12 +11,12 @@ enum AnimalSearchType: String, CaseIterable {
     case none
     case cat
     case dog
-    case rabbit
+    case rabbit = "hare"
     case smallAndFurry = "small & furry"
     case horse
     case bird
     case scalesFinsAndOther = "scales, fins, & other"
-    case barnyard
+    case farm
 }
 
 extension AnimalSearchType {
