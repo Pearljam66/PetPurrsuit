@@ -167,7 +167,11 @@
         }
       }
     },
+    "Find your future friend" : {
+
+    },
     "Find your future furry friend" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {

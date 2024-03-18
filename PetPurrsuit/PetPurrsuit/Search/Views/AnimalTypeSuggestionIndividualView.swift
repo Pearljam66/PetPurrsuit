@@ -14,18 +14,12 @@ struct AnimalTypeSuggestionIndividualView: View {
         [Color.clear, Color.black]
     }
 
-    @ViewBuilder private var gradientOverlay: some View {
-        LinearGradient(colors: gradientColors, startPoint: .top, endPoint: .bottom)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .opacity(0.4)
-    }
-
     var body: some View {
         suggestion.suggestionImage
             .resizable()
+            //.background(Color.orange)
             .aspectRatio(2, contentMode: .fit)
             .frame(height: 100)
-            .overlay(gradientOverlay)
             .overlay(alignment: .bottomLeading) {
                 Text(LocalizedStringKey(suggestion.rawValue
                     .capitalized))
@@ -34,6 +28,7 @@ struct AnimalTypeSuggestionIndividualView: View {
                 .font(.title3)
             }
             .cornerRadius(16)
+
     }
 }
 

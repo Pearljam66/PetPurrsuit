@@ -7,23 +7,19 @@
 
 import SwiftUI
 
-struct AnimalSuggestionsGrid: View {
+struct AnimalSuggestionsStack: View {
     @Environment(\.isSearching) var isSearching: Bool
     let suggestions: [AnimalSearchType]
     var action: (AnimalSearchType) -> Void
 
-    private let columns = [
-        GridItem(.flexible()),
-        GridItem(.flexible())
-    ]
-
     var body: some View {
-        VStack(alignment: .leading) {
+        LazyVStack(alignment: .center) {
             Text("Browse by Type")
+                .padding(.top, 200)
                 .font(.title)
                 .padding(.horizontal, 10)
                 .padding(.vertical, 10)
-            LazyVGrid(columns: columns) {
+            VStack {
                 ForEach(AnimalSearchType.suggestions, id: \.self) { suggestion in
                     Button {
                         action(suggestion)
@@ -37,5 +33,5 @@ struct AnimalSuggestionsGrid: View {
 }
 
 #Preview {
-    AnimalSuggestionsGrid(suggestions: AnimalSearchType.suggestions) { _ in }
+    AnimalSuggestionsStack(suggestions: AnimalSearchType.suggestions) { _ in }
 }
