@@ -39,6 +39,12 @@
         }
       }
     },
+    "Animal Age" : {
+
+    },
+    "Animal Type" : {
+
+    },
     "Animals near you" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -391,6 +397,7 @@
       }
     },
     "Type" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {

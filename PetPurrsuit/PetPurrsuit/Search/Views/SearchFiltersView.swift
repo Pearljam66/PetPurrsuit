@@ -12,40 +12,47 @@ struct SearchFiltersView: View {
     @ObservedObject var viewModel: AnimalSearchViewModel
 
     var body: some View {
-        Form {
-            Section {
-                Picker("Age", selection: $viewModel.ageSelection) {
-                    ForEach(AnimalSearchAge.allCases, id: \.self) { age in
-                        Text(age.rawValue.capitalized)
+        VStack {
+            Form {
+                Section {
+                    Picker("Animal Age", selection: $viewModel.ageSelection) {
+                        ForEach(AnimalSearchAge.allCases, id: \.self) { age in
+                            Text(age.rawValue.capitalized)
+                        }
                     }
-                }
-                .onChange(of: viewModel.ageSelection) {
-                    viewModel.search()
-                }
+                    .onChange(of: viewModel.ageSelection) {
+                        viewModel.search()
+                    }
 
-                Picker("Type", selection: $viewModel.typeSelection) {
-                    ForEach(AnimalSearchType.allCases, id: \.self) { type in
-                        Text(type.rawValue.capitalized)
+                    Picker("Animal Type", selection: $viewModel.typeSelection) {
+                        ForEach(AnimalSearchType.allCases, id: \.self) { type in
+                            Text(type.rawValue.capitalized)
+                        }
                     }
+                    .onChange(of: viewModel.typeSelection) {
+                        viewModel.search()
+                    }
+                } footer: {
+                    Text("You can mix both, age and type, to make a more accurate search.")
                 }
-                .onChange(of: viewModel.typeSelection) {
-                    viewModel.search()
-                }
-            } footer: {
-            Text("You can mix both, age and type, to make a more accurate search.")
-        }
-            Button("Clear", role: .destructive, action: viewModel.clearFilters)
-            Button("Done") {
-                dismiss()
             }
-        }
-        .navigationTitle("Filters")
-        .toolbar {
-            ToolbarItem {
-                Button {
+            Spacer()
+            HStack {
+                Spacer()
+                Button("Clear", role: .destructive, action: viewModel.clearFilters)
+                // TODO: is this done button needed?
+                Button("Done") {
                     dismiss()
-                } label: {
-                    Label("Close", systemImage: "xmark.circle.fill")
+                }
+            }
+            .navigationTitle("Filters")
+            .toolbar {
+                ToolbarItem {
+                    Button {
+                        dismiss()
+                    } label: {
+                        Label("Close", systemImage: "xmark.circle.fill")
+                    }
                 }
             }
         }
