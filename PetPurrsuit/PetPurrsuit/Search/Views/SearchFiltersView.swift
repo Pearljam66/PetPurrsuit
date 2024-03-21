@@ -40,10 +40,14 @@ struct SearchFiltersView: View {
             HStack {
                 Spacer()
                 Button("Clear", role: .destructive, action: viewModel.clearFilters)
+                    .padding(.trailing, 15)
+                    .padding(.top, 10)
                 // TODO: is this done button needed?
                 Button("Done") {
                     dismiss()
                 }
+                .padding(.trailing, 20)
+                .padding(.top, 10)
             }
             .navigationTitle("Filters")
             .toolbar {
