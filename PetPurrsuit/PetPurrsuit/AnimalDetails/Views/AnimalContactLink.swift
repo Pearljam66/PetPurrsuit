@@ -33,17 +33,15 @@ struct AnimalContactLink: View {
     }
 }
 
-struct AnimalContactLink_Previews: PreviewProvider {
-    static var previews: some View {
-        if let url = URL(string: "www.apple.com") {
-            AnimalContactLink(
-                title: "(555) 123-4567",
-                iconName: "phone.fill",
-                url: url,
-                color: .petdarkgreen
-            )
-            .padding()
-            .previewLayout(.sizeThatFits)
-        }
+#Preview {
+    if let url = URL(string: "www.apple.com") {
+        AnimalContactLink(
+            title: "(555) 123-4567",
+            iconName: "phone.fill",
+            url: url,
+            color: .petdarkgreen
+        )
+        .padding()
+        .previewLayout(.sizeThatFits)
     }
 }

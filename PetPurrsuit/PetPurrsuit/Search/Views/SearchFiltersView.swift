@@ -63,16 +63,14 @@ struct SearchFiltersView: View {
     }
 }
 
-struct SearchFilterView_Previews: PreviewProvider {
-    static var previews: some View {
-        let context = PersistenceController.preview.container.viewContext
-        NavigationView {
-            SearchFiltersView(
-                viewModel: AnimalSearchViewModel(
-                    animalSearcher: AnimalSearcherMock(),
-                    animalStore: AnimalStoreService(context: context)
-                )
+#Preview {
+    let context = PersistenceController.preview.container.viewContext
+    NavigationView {
+        SearchFiltersView(
+            viewModel: AnimalSearchViewModel(
+                animalSearcher: AnimalSearcherMock(),
+                animalStore: AnimalStoreService(context: context)
             )
-        }
+        )
     }
 }

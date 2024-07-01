@@ -49,32 +49,30 @@ struct AnimalsNearYouView: View {
     }
 }
 
-struct AnimalsNearYouView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            AnimalsNearYouView(
-                viewModel: AnimalsNearYouViewModel(
-                    animalFetcher: AnimalsFetcherMock(),
-                    animalStore: AnimalStoreService(
-                        context: PersistenceController.preview.container.viewContext
-                    )
+#Preview {
+    Group {
+        AnimalsNearYouView(
+            viewModel: AnimalsNearYouViewModel(
+                animalFetcher: AnimalsFetcherMock(),
+                animalStore: AnimalStoreService(
+                    context: PersistenceController.preview.container.viewContext
                 )
             )
-
-            AnimalsNearYouView(
-                viewModel: AnimalsNearYouViewModel(
-                    animalFetcher: AnimalsFetcherMock(),
-                    animalStore: AnimalStoreService(
-                        context: PersistenceController.preview.container.viewContext
-                    )
-                )
-            )
-            .preferredColorScheme(.dark)
-        }
-        .environment(
-            \.managedObjectContext,
-             PersistenceController.preview.container.viewContext
         )
-        .environmentObject(LocationManager())
+
+        AnimalsNearYouView(
+            viewModel: AnimalsNearYouViewModel(
+                animalFetcher: AnimalsFetcherMock(),
+                animalStore: AnimalStoreService(
+                    context: PersistenceController.preview.container.viewContext
+                )
+            )
+        )
+        .preferredColorScheme(.dark)
     }
+    .environment(
+        \.managedObjectContext,
+         PersistenceController.preview.container.viewContext
+    )
+    .environmentObject(LocationManager())
 }

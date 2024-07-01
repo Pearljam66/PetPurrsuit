@@ -69,21 +69,19 @@ struct AnimalDetailMainView: View {
     }
 }
 
-struct AnimalsView_Previews: PreviewProvider {
-    static var previews: some View {
-        if let animal = CoreDataHelper.getTestAnimalEntity() {
-            NavigationView {
-                AnimalDetailMainView(animal: animal)
-                    .previewLayout(.sizeThatFits)
-            }
-            .previewLayout(.sizeThatFits)
-            .previewDisplayName("iPhone SE (2nd generation)")
-
-            NavigationView {
-                AnimalDetailMainView(animal: animal)
-            }
-            .previewDevice("iPhone 12 Pro")
-            .previewDisplayName("iPhone 12 Pro")
+#Preview {
+    if let animal = CoreDataHelper.getTestAnimalEntity() {
+        NavigationView {
+            AnimalDetailMainView(animal: animal)
+                .previewLayout(.sizeThatFits)
         }
+        .previewLayout(.sizeThatFits)
+        .previewDisplayName("iPhone SE (2nd generation)")
+
+        NavigationView {
+            AnimalDetailMainView(animal: animal)
+        }
+        .previewDevice("iPhone 12 Pro")
+        .previewDisplayName("iPhone 12 Pro")
     }
 }

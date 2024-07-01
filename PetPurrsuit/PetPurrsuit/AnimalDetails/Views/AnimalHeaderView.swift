@@ -91,35 +91,32 @@ struct HeaderTitle_Previews: PreviewProvider {
     }
 }
 
-struct AnimalHeaderView_Previews: PreviewProvider {
-    static var previews: some View {
-        if let animal = CoreDataHelper.getTestAnimalEntity() {
-            Group {
-                GeometryReader { geometry in
-                    AnimalHeaderView(animal: animal,
-                                     zoomed: .constant(true),
-                                     favorited: .constant(false),
-                                     geometry: geometry)
-                }
-                .frame(width: 500, height: 700)
-
-                GeometryReader { geometry in
-                    AnimalHeaderView(animal: animal,
-                                     zoomed: .constant(false),
-                                     favorited: .constant(true),
-                                     geometry: geometry)
-                }
-                .frame(width: 500, height: 100)
-
-                GeometryReader { geometry in
-                    AnimalHeaderView(animal: animal,
-                                     zoomed: .constant(false),
-                                     favorited: .constant(false),
-                                     geometry: geometry)
-                }
-                .frame(width: 500, height: 100)
+#Preview {
+    if let animal = CoreDataHelper.getTestAnimalEntity() {
+        Group {
+            GeometryReader { geometry in
+                AnimalHeaderView(animal: animal,
+                                 zoomed: .constant(true),
+                                 favorited: .constant(false),
+                                 geometry: geometry)
             }
-            .previewLayout(.sizeThatFits)
+            .frame(width: 500, height: 700)
+
+            GeometryReader { geometry in
+                AnimalHeaderView(animal: animal,
+                                 zoomed: .constant(false),
+                                 favorited: .constant(true),
+                                 geometry: geometry)
+            }
+            .frame(width: 500, height: 100)
+            GeometryReader { geometry in
+                AnimalHeaderView(animal: animal,
+                                 zoomed: .constant(false),
+                                 favorited: .constant(false),
+                                 geometry: geometry)
+            }
+            .frame(width: 500, height: 100)
         }
+        .previewLayout(.sizeThatFits)
     }
 }

@@ -30,27 +30,25 @@ struct PetRankingView: View {
     }
 }
 
-struct PetRankingView_Previews: PreviewProvider {
-    static var previews: some View {
-        if let animal = CoreDataHelper.getTestAnimalEntity() {
-            Group {
-                PetRankingView(animal: animal)
-                    .padding()
-                    .previewLayout(.sizeThatFits)
-                    .environment(\.sizeCategory, .extraSmall)
-                    .previewDisplayName("Extra-Small")
+#Preview {
+    if let animal = CoreDataHelper.getTestAnimalEntity() {
+        Group {
+            PetRankingView(animal: animal)
+                .padding()
+                .previewLayout(.sizeThatFits)
+                .environment(\.sizeCategory, .extraSmall)
+                .previewDisplayName("Extra-Small")
 
-                PetRankingView(animal: animal)
-                    .padding()
-                    .previewLayout(.sizeThatFits)
-                    .previewDisplayName("Regular")
+            PetRankingView(animal: animal)
+                .padding()
+                .previewLayout(.sizeThatFits)
+                .previewDisplayName("Regular")
 
-                PetRankingView(animal: animal)
-                    .padding()
-                    .previewLayout(.sizeThatFits)
-                    .environment(\.sizeCategory, .extraLarge)
-                    .previewDisplayName("Extra-Large")
-            }
+            PetRankingView(animal: animal)
+                .padding()
+                .previewLayout(.sizeThatFits)
+                .environment(\.sizeCategory, .extraLarge)
+                .previewDisplayName("Extra-Large")
         }
     }
 }

@@ -28,19 +28,17 @@ struct AnimalDetailCard: View {
     }
 }
 
-struct AnimalDetailCard_Previews: PreviewProvider {
-    static var previews: some View {
-        HStack {
-            AnimalDetailCard(
-                title: "Age",
-                value: "Adult",
-                color: .petmediumblue
-            )
-            AnimalDetailCard(
-                title: "Age",
-                value: "Baby",
-                color: .petmediumblue
-            )
-        }
+#Preview {
+    HStack {
+        AnimalDetailCard(
+            title: "Age",
+            value: "Adult",
+            color: .petmediumblue
+        )
+        AnimalDetailCard(
+            title: "Age",
+            value: "Baby",
+            color: .petmediumblue
+        )
     }
 }

@@ -79,10 +79,8 @@ struct AnimalRow: View {
     }
 }
 
-struct AnimalRow_Previews: PreviewProvider {
-    static var previews: some View {
-        if let animal = CoreDataHelper.getTestAnimalEntity() {
-            AnimalRow(animal: animal)
-        }
+#Preview {
+    if let animal = CoreDataHelper.getTestAnimalEntity() {
+        AnimalRow(animal: animal)
     }
 }

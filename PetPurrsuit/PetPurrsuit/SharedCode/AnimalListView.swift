@@ -42,20 +42,17 @@ struct AnimalListView<Content, Data>: View where Content: View, Data: RandomAcce
             footer
         }
         .listStyle(.plain)
-
     }
 }
 
-struct AnimalListView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            AnimalListView(animals: CoreDataHelper.getTestAnimalEntities() ?? [])
-        }
+#Preview {
+    NavigationView {
+        AnimalListView(animals: CoreDataHelper.getTestAnimalEntities() ?? [])
+    }
 
-        NavigationView {
-            AnimalListView(animals: []) {
-                Text("This is a footer")
-            }
+    NavigationView {
+        AnimalListView(animals: []) {
+            Text("This is a footer")
         }
     }
 }

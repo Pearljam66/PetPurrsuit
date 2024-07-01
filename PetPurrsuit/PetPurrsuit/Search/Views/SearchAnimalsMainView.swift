@@ -76,19 +76,17 @@ struct SearchAnimalsMainView: View {
     }
 }
 
-struct SearchAnimalsView_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchAnimalsMainView(
-            viewModel: AnimalSearchViewModel(
-                animalSearcher: AnimalSearcherMock(),
-                animalStore: AnimalStoreService(
-                    context: PersistenceController.preview.container.viewContext
-                )
+#Preview {
+    SearchAnimalsMainView(
+        viewModel: AnimalSearchViewModel(
+            animalSearcher: AnimalSearcherMock(),
+            animalStore: AnimalStoreService(
+                context: PersistenceController.preview.container.viewContext
             )
         )
-        .environment(
-            \.managedObjectContext,
-             PersistenceController.preview.container.viewContext
-        )
-    }
+    )
+    .environment(
+        \.managedObjectContext,
+         PersistenceController.preview.container.viewContext
+    )
 }

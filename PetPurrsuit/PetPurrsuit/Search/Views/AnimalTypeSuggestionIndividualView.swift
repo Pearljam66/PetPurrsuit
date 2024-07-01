@@ -32,13 +32,9 @@ struct AnimalTypeSuggestionIndividualView: View {
     }
 }
 
-struct AnimalTypeSuggestionView_Previews: PreviewProvider {
-    static var previews: some View {
-        AnimalTypeSuggestionIndividualView(suggestion: AnimalSearchType.cat)
-            .previewLayout(.sizeThatFits)
-        AnimalTypeSuggestionIndividualView(suggestion: AnimalSearchType.cat)
-            .previewLayout(.sizeThatFits)
-            .environment(\.locale, .init(identifier: "es"))
-            .previewDisplayName("Spanish Locale")
-    }
+#Preview {
+    AnimalTypeSuggestionIndividualView(suggestion: AnimalSearchType.cat)
+        .previewLayout(.sizeThatFits)
+        .environment(\.locale, .init(identifier: "es"))
+        .previewDisplayName("Spanish Locale")
 }
