@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@MainActor
 struct Pet: Identifiable {
     let id = UUID()
     let petImage: Image

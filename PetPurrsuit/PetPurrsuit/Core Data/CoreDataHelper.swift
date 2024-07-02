@@ -5,7 +5,7 @@
 //  Created by Sarah Clark on 3/5/24.
 //
 
-import CoreData
+@preconcurrency import CoreData
 
 enum CoreDataHelper {
     static let context = PersistenceController.shared.container.viewContext
